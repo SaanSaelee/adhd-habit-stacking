@@ -200,19 +200,22 @@ img {
   justify-content: center;
   align-items: center;
   width: 60%;
-  padding: 2rem;
+  padding: 5rem;
+  margin: 5rem;
   background: #fff;
   border: 1px solid var(--clr-black);
-  box-shadow: 1rem 1rem black;
-}
-
-.brain-left,
-.brain-right {
-  padding: 1rem;
+  box-shadow: 1rem 1rem var(--clr-black);
 }
 
 .brain-right {
-  /* border: 1px solid var(--clr-black); */
+  padding: 3rem;
+}
+
+.brain-right {
+  border: 1px solid var(--clr-black);
+  background: var(--clr-primary-pink);
+  color: #fff;
+  box-shadow: .3rem -.3rem var(--clr-black);
 }
 
 .brain-pic {
@@ -222,14 +225,16 @@ img {
 
 .brain-right-header {
   font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
 .brain-right-subheader {
-  margin: 20px 0 40px;
   font-weight: 500;
   line-height: 1.75rem;
   text-align: left;
   font-size: 1.25rem;
+  color: #fff;
 }
 
 /* ************************ End main-two ************************ */

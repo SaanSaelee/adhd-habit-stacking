@@ -95,10 +95,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .nav-links ul li {
-  margin: 1rem;
+  padding: 0 1rem;
 }
 
 .logo-wrapper {
@@ -120,6 +121,10 @@ button {
   border: 2px solid var(--clr-black);
   box-shadow: 5px 5px var(--clr-black);
 }
+.contact-btn:hover {
+  animation: box-shadow 500ms infinite ease-out;
+
+}
 
 .ideas-btn {
   background: var(--clr-primary-purple);
@@ -128,13 +133,18 @@ button {
   animation: ideas-btn 1250ms infinite ease-in-out;
 }
 
-
 @keyframes ideas-btn {
   0% {
     transform: translateY(0);
   }
   100% {
     transform: translateY(10px);
+  }
+}
+
+@keyframes box-shadow {
+  100% {
+    box-shadow: 10px 10px var(--clr-black);
   }
 }
 
@@ -186,51 +196,50 @@ img {
 
 /* ************************ Start brain section ************************ */
 
-#brain-section {
+#stack-section {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: #afb4ff;
+  background: #faf7ff;
 }
 
-.brain-wrapper {
+.stack-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 60%;
-  padding: 3rem;
-  margin: 5rem;
+  padding: 5rem;
+  /* margin: 5rem; */
   background: #fff;
   border: 1px solid var(--clr-black);
   box-shadow: 1rem 1rem var(--clr-black);
 }
 
-.brain-right {
+.stack-right {
   padding: 3rem;
 }
 
-.brain-right {
+.stack-right {
   border: 1px solid var(--clr-black);
   background: var(--clr-primary-pink);
   color: #fff;
-  box-shadow: .3rem -.3rem var(--clr-black);
+  box-shadow: 0.3rem -0.3rem var(--clr-black);
 }
 
-.brain-pic {
-  opacity: 0.7;
-  padding: 3rem;
+.stack-pic {
+  padding: 0 3rem 0 0;
 }
 
-.brain-right-header {
+.stack-right-header {
   font-size: 2rem;
   color: #fff;
   margin-bottom: 1rem;
 }
 
-.brain-right-subheader {
-  font-weight: 500;
+.stack-right-subheader {
+  font-weight: 100;
   line-height: 1.75rem;
   text-align: left;
   font-size: 1.25rem;

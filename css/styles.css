@@ -69,6 +69,55 @@ button {
 
 /* ************************ End Base Styles ************************ */
 
+/* ************************ Start Button ************************ */
+
+.pink-btn {
+  background: var(--clr-primary-pink);
+  border: 2px solid var(--clr-black);
+  box-shadow: 5px 5px var(--clr-black);
+  transition: box-shadow 300ms ease;
+}
+.contact-btn:hover {
+  box-shadow: 10px 10px var(--clr-black);
+}
+
+.purple-btn,
+.article-btn {
+  background: var(--clr-primary-purple);
+  border: 1px solid var(--clr-black);
+  box-shadow: 5px 5px var(--clr-black);
+}
+
+.ideas-btn {
+  animation: ideas-btn 1250ms infinite alternate;
+}
+
+@keyframes ideas-btn {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.article-btn {
+  position: relative;
+  top: -1rem;
+  left: 0;
+  box-shadow: 0 0 var(--clr-black);
+  transition: all 300ms ease;
+}
+
+.article-btn:hover {
+  box-shadow: -5px 5px var(--clr-black);
+  top: -1rem;
+  left: 0;
+  position: relative;
+}
+
+/* ************************ End Button ************************ */
+
 /* ************************  Navbar ************************ */
 
 #navbar {
@@ -81,6 +130,7 @@ button {
   color: var(--clr-white);
   font-size: 1.6rem;
   position: fixed;
+  z-index: 100;
   width: 100%;
 }
 
@@ -114,42 +164,6 @@ button {
 
 /* ************************ End Navbar ************************ */
 
-/* ************************ Start Button ************************ */
-
-.contact-btn {
-  background: var(--clr-primary-pink);
-  border: 2px solid var(--clr-black);
-  box-shadow: 5px 5px var(--clr-black);
-}
-.contact-btn:hover {
-  animation: box-shadow 500ms infinite ease-out;
-
-}
-
-.ideas-btn {
-  background: var(--clr-primary-purple);
-  border: 1px solid var(--clr-black);
-  box-shadow: 5px 5px var(--clr-black);
-  animation: ideas-btn 1250ms infinite ease-in-out;
-}
-
-@keyframes ideas-btn {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(10px);
-  }
-}
-
-@keyframes box-shadow {
-  100% {
-    box-shadow: 10px 10px var(--clr-black);
-  }
-}
-
-/* ************************ End Button ************************ */
-
 /* ************************ Main section ************************ */
 
 #main-section {
@@ -166,12 +180,12 @@ button {
   align-items: center;
   width: 100%;
   padding: 5rem;
-  margin: 0 auto;
 }
 
 .main-left {
   width: 50%;
   padding: 5rem 0 5rem 5rem;
+  cursor: default;
 }
 
 .main-left-header {
@@ -194,7 +208,7 @@ img {
 
 /* ************************ End main section ************************ */
 
-/* ************************ Start brain section ************************ */
+/* ************************ Start stack section ************************ */
 
 #stack-section {
   display: flex;
@@ -211,14 +225,16 @@ img {
   align-items: center;
   width: 60%;
   padding: 5rem;
-  /* margin: 5rem; */
   background: #fff;
   border: 1px solid var(--clr-black);
   box-shadow: 1rem 1rem var(--clr-black);
 }
 
-.stack-right {
-  padding: 3rem;
+.stack-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .stack-right {
@@ -226,10 +242,12 @@ img {
   background: var(--clr-primary-pink);
   color: #fff;
   box-shadow: 0.3rem -0.3rem var(--clr-black);
+  padding: 3rem;
+  cursor: default;
 }
 
 .stack-pic {
-  padding: 0 3rem 0 0;
+  padding: 0 3rem;
 }
 
 .stack-right-header {
@@ -246,9 +264,9 @@ img {
   color: #fff;
 }
 
-/* ************************ End main-two ************************ */
+/* ************************ End stack section ************************ */
 
-/* ************************ Main-three ************************ */
+/* ************************ Start comments section ************************ */
 
 #main-three-container {
   width: 100%;
@@ -290,7 +308,7 @@ img {
   letter-spacing: 0.1rem;
 }
 
-/* ************************ End main-three ************************ */
+/* ************************ End comments section ************************ */
 
 /* ************************ Footer ************************ */
 

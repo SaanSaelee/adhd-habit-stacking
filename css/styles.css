@@ -1,0 +1,328 @@
+/* ************************ ROOT STYLES ************************ */
+:root {
+  --clr-white: #fff;
+  --clr-black: #212529;
+  --clr-bg-white: #eaf6f6;
+  --clr-lavendar: #c9bbcf;
+  --clr-teal: #9dd6df;
+  --clr-gray: #495057;
+  --clr-shadow-gray: #888888;
+  --clr-nav-teal: #66bfbf;
+  --clr-hotpink: #ff0063;
+  --font-VIC: "Edu VIC WA NT Beginner", cursive;
+  --font-Mont: "Montserrat", sans-serif;
+
+  --clr-primary-purple: #5800ff;
+  --clr-primary-pink: #f637ec;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ************************ Base Styles ************************ */
+
+body {
+  font-family: "Montserrat", sans-serif, helvetica;
+  font-size: 62.5%;
+  color: var(--clr-black);
+  width: 100%;
+}
+
+p {
+  color: var(--clr-gray);
+}
+
+h1 {
+  color: var(--clr-black);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-white);
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 800;
+}
+
+/* ************************ End Base Styles ************************ */
+
+/* ************************  Navbar ************************ */
+
+#navbar {
+  background: linear-gradient(
+    to left,
+    var(--clr-primary-purple) 20%,
+    var(--clr-primary-pink)
+  );
+  box-shadow: 0 1px 30px var(--clr-shadow-gray);
+  color: var(--clr-white);
+  font-size: 1.6rem;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links ul li {
+  margin: 1rem;
+}
+
+.logo-wrapper {
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-family: var(--font-VIC), sans-serif, Arial, Helvetica;
+  font-size: 2.5rem;
+  color: var(--clr-bg-white);
+}
+
+/* ************************ End Navbar ************************ */
+
+/* ************************ Start Button ************************ */
+
+.contact-btn {
+  background: var(--clr-primary-pink);
+  border: 2px solid var(--clr-black);
+  box-shadow: 5px 5px var(--clr-black);
+}
+
+.ideas-btn {
+  background: var(--clr-primary-purple);
+  border: 1px solid var(--clr-black);
+  box-shadow: 5px 5px var(--clr-black);
+  animation: ideas-btn 1250ms infinite ease-in-out;
+}
+
+
+@keyframes ideas-btn {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+/* ************************ End Button ************************ */
+
+/* ************************ Main section ************************ */
+
+#main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5rem;
+  margin: 0 auto;
+}
+
+.main-left {
+  width: 50%;
+  padding: 5rem 0 5rem 5rem;
+}
+
+.main-left-header {
+  line-height: 3.25rem;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.main-left-subheader {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  width: 70%;
+  margin: 2rem 0;
+}
+
+img {
+  max-width: 40rem;
+}
+
+/* ************************ End main section ************************ */
+
+/* ************************ Start brain section ************************ */
+
+#brain-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #afb4ff;
+}
+
+.brain-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid var(--clr-black);
+  box-shadow: 1rem 1rem black;
+}
+
+.brain-left,
+.brain-right {
+  padding: 1rem;
+}
+
+.brain-right {
+  /* border: 1px solid var(--clr-black); */
+}
+
+.brain-pic {
+  opacity: 0.7;
+  padding: 3rem;
+}
+
+.brain-right-header {
+  font-size: 2rem;
+}
+
+.brain-right-subheader {
+  margin: 20px 0 40px;
+  font-weight: 500;
+  line-height: 1.75rem;
+  text-align: left;
+  font-size: 1.25rem;
+}
+
+/* ************************ End main-two ************************ */
+
+/* ************************ Main-three ************************ */
+
+#main-three-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: -20;
+}
+
+.main-three-wrapper {
+  display: flex;
+  align-items: right;
+  margin: 10rem 10rem;
+}
+
+.main-three {
+  position: relative;
+}
+
+.idea-box {
+  background: var(--clr-white);
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 10px #888888;
+  border-radius: 5px;
+  border-top: 3rem solid var(--clr-teal);
+}
+
+.idea-box p {
+  color: var(--clr-black);
+  text-align: center;
+  font-weight: 900;
+  margin: auto;
+  font-size: 2rem;
+  padding: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+/* ************************ End main-three ************************ */
+
+/* ************************ Footer ************************ */
+
+footer {
+  background: var(--clr-white);
+  height: 200px;
+  box-shadow: 0 -1px 30px var(--clr-shadow-gray);
+  font-size: 1.5rem;
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 6rem;
+  padding: 2rem 0;
+  width: 100%;
+  height: auto;
+}
+
+.footer-nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav-links li {
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.footer-header {
+  font-weight: 900;
+  cursor: auto;
+}
+
+/* ************************ End Footer ************************ */
+
+/* ***************** Large devices only ***************** */
+@media (min-width: 1200px) {
+}
+
+/* ***************** Medium devices only ***************** */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* ***************** Small devices only ***************** */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* ***************** Extra Small devices only ***************** */
+@media (max-width: 767px) {
+}

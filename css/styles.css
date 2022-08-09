@@ -1,20 +1,19 @@
-/* ************************ ROOT STYLES ************************ */
+/* ************************ START ROOT STYLES ************************ */
 :root {
   --clr-white: #fff;
   --clr-black: #212529;
-  --clr-bg-white: #eaf6f6;
-  --clr-lavendar: #c9bbcf;
-  --clr-teal: #9dd6df;
   --clr-gray: #495057;
   --clr-shadow-gray: #888888;
-  --clr-nav-teal: #66bfbf;
-  --clr-hotpink: #ff0063;
-  --font-VIC: "Edu VIC WA NT Beginner", cursive;
-  --font-Mont: "Montserrat", sans-serif;
-
   --clr-primary-purple: #5800ff;
   --clr-primary-pink: #f637ec;
+  --clr-lavender-light: #faf7ff;
+  --font-VIC: "Edu VIC WA NT Beginner", sans-serif, helvetica, Arial;
+  --font-Mont: "Montserrat", sans-serif, helvetica, Arial;
 }
+
+/* ************************ END ROOT STYLES ************************ */
+
+/* ************************ START BASE STYLES ************************ */
 
 *,
 ::before,
@@ -22,28 +21,17 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 html {
-  box-sizing: border-box;
   width: 100%;
+  font-size: 62.5%;
 }
-
-/* ************************ Base Styles ************************ */
 
 body {
   font-family: "Montserrat", sans-serif, helvetica;
-  font-size: 62.5%;
-  color: var(--clr-black);
   width: 100%;
-}
-
-p {
-  color: var(--clr-gray);
-}
-
-h1 {
-  color: var(--clr-black);
 }
 
 li {
@@ -57,24 +45,24 @@ a {
 
 button {
   font-family: "Montserrat", sans-serif;
-  border: none;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  color: #fff;
-  font-weight: 800;
+  padding: 1.6rem 3.2rem;
+  font-size: 1.6rem;
+  color: var(--clr-white);
+  font-weight: 600;
 }
 
-/* ************************ End Base Styles ************************ */
+/* ************************ END BASE STYLES ************************ */
 
 /* ************************ Start Button ************************ */
 
 .pink-btn {
   background: var(--clr-primary-pink);
   border: 2px solid var(--clr-black);
-  box-shadow: 5px 5px var(--clr-black);
+  box-shadow: 0 0 var(--clr-black);
+  border-radius: 2px;
   transition: box-shadow 300ms ease;
 }
 .contact-btn:hover {
@@ -85,7 +73,8 @@ button {
 .article-btn {
   background: var(--clr-primary-purple);
   border: 1px solid var(--clr-black);
-  box-shadow: 5px 5px var(--clr-black);
+  box-shadow: 10px 10px var(--clr-black);
+  border-radius: 2px;
 }
 
 .ideas-btn {
@@ -103,15 +92,15 @@ button {
 
 .article-btn {
   position: relative;
-  top: -1rem;
+  top: -1.6rem;
   left: 0;
   box-shadow: 0 0 var(--clr-black);
   transition: all 300ms ease;
 }
 
 .article-btn:hover {
-  box-shadow: -5px 5px var(--clr-black);
-  top: -1rem;
+  box-shadow: -10px 10px var(--clr-black);
+  top: -1.6rem;
   left: 0;
   position: relative;
 }
@@ -128,17 +117,17 @@ button {
   );
   box-shadow: 0 1px 30px var(--clr-shadow-gray);
   color: var(--clr-white);
-  font-size: 1.6rem;
+  font-size: 2rem;
   position: fixed;
   z-index: 100;
   width: 100%;
 }
 
 .navbar-wrapper {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .nav-links ul {
@@ -153,13 +142,13 @@ button {
 }
 
 .logo-wrapper {
-  padding: 1rem 2rem;
+  padding: 1.6rem 3.2rem;
 }
 
 .logo {
   font-family: var(--font-VIC), sans-serif, Arial, Helvetica;
-  font-size: 2.5rem;
-  color: var(--clr-bg-white);
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 /* ************************ End Navbar ************************ */
@@ -179,27 +168,26 @@ button {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 5rem;
+  padding: 8rem 12rem;
 }
 
 .main-left {
-  width: 50%;
-  padding: 5rem 0 5rem 5rem;
-  cursor: default;
+  width: 100%;
+  /* padding: 5rem 0 5rem 5rem; */
 }
 
 .main-left-header {
-  line-height: 3.25rem;
-  font-size: 3rem;
-  font-weight: 900;
+  line-height: 5.2rem;
+  font-size: 4.8rem;
+  font-weight: 600;
 }
 
 .main-left-subheader {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  font-weight: 400;
   width: 70%;
-  margin: 2rem 0;
+  padding: 3.2rem 0;
 }
 
 img {
@@ -214,20 +202,20 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--clr-lavender-light);
   width: 100%;
   height: 100vh;
-  background: #faf7ff;
 }
 
 .stack-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  padding: 5rem;
   background: #fff;
   border: 1px solid var(--clr-black);
   box-shadow: 1rem 1rem var(--clr-black);
+  width: 60%;
+  padding: 5rem;
 }
 
 .stack-left {
@@ -240,10 +228,9 @@ img {
 .stack-right {
   border: 1px solid var(--clr-black);
   background: var(--clr-primary-pink);
-  color: #fff;
+  color: var(--clr-white);
   box-shadow: 0.3rem -0.3rem var(--clr-black);
   padding: 3rem;
-  cursor: default;
 }
 
 .stack-pic {
@@ -252,42 +239,98 @@ img {
 
 .stack-right-header {
   font-size: 2rem;
-  color: #fff;
+  color: var(--clr-white);
   margin-bottom: 1rem;
 }
 
 .stack-right-subheader {
-  font-weight: 100;
-  line-height: 1.75rem;
+  font-weight: 400;
+  line-height: 1.5rem;
   text-align: left;
-  font-size: 1.25rem;
-  color: #fff;
+  font-size: 1rem;
+  color: var(--clr-white);
 }
 
 /* ************************ End stack section ************************ */
 
 /* ************************ Start comments section ************************ */
 
-#main-three-container {
-  width: 100%;
-  height: 100vh;
-  position: relative;
+#comments-section {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: -20;
+  background: #fff;
+  width: 100%;
+  padding: 9rem 4rem 10rem;
 }
 
-.main-three-wrapper {
+.comments-top,
+.comments-bottom {
   display: flex;
-  align-items: right;
-  margin: 10rem 10rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.main-three {
-  position: relative;
+.comments-top {
+  padding: 6rem 4.5rem 0;
+}
+.comments-bottom {
+  padding: 0 4.5rem 6rem;
 }
 
-.idea-box {
+.comments-header-wrapper {
+  padding: 0 4rem;
+}
+
+.comments-header {
+  text-align: center;
+}
+
+.comments-header h2 {
+  font-size: 4.8rem;
+  line-height: 6rem;
+}
+.comments-header p {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+.comments-area-wrapper {
+  display: flex;
+  padding: 25px;
+}
+
+.comments-container {
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.comments {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  color: var(--clr-black);
+  border: 1px solid var(--clr-black);
+  box-shadow: 0.5rem 0.5rem var(--clr-black);
+  border-radius: 0.2rem;
+
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  text-align: center;
+  padding: 25px;
+  height: 100%;
+}
+
+/* ************************ End comments section ************************ */
+
+/* ************************ Start Ideas section ************************ */
+
+/* .idea-box {
   background: var(--clr-white);
   position: relative;
   width: 100%;
@@ -296,9 +339,9 @@ img {
   box-shadow: 0 0 10px #888888;
   border-radius: 5px;
   border-top: 3rem solid var(--clr-teal);
-}
+} */
 
-.idea-box p {
+/* .idea-box p {
   color: var(--clr-black);
   text-align: center;
   font-weight: 900;
@@ -306,13 +349,13 @@ img {
   font-size: 2rem;
   padding: 1.5rem;
   letter-spacing: 0.1rem;
-}
+} */
 
-/* ************************ End comments section ************************ */
+/* ************************ End Ideas section ************************ */
 
 /* ************************ Footer ************************ */
 
-footer {
+/* footer {
   background: var(--clr-white);
   height: 200px;
   box-shadow: 0 -1px 30px var(--clr-shadow-gray);
@@ -324,22 +367,22 @@ footer {
   padding: 2rem 0;
   width: 100%;
   height: auto;
-}
+} */
 
-.footer-nav-links {
+/* .footer-nav-links {
   display: flex;
   flex-direction: column;
-}
+} */
 
-.footer-nav-links li {
+/* .footer-nav-links li {
   margin: 0.5rem;
   cursor: pointer;
-}
+} */
 
-.footer-header {
+/* .footer-header {
   font-weight: 900;
   cursor: auto;
-}
+} */
 
 /* ************************ End Footer ************************ */
 

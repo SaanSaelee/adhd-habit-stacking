@@ -78,7 +78,7 @@ button {
 }
 
 .ideas-btn {
-  animation: ideas-btn 1250ms infinite alternate;
+  animation: ideas-btn 1000ms infinite alternate;
 }
 
 @keyframes ideas-btn {
@@ -167,91 +167,34 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 8rem 12rem;
+  max-width: 1280px;
+  padding: 10rem;
 }
 
 .main-left {
   width: 100%;
-  /* padding: 5rem 0 5rem 5rem; */
 }
 
 .main-left-header {
-  line-height: 5.2rem;
+  line-height: 5.5rem;
   font-size: 4.8rem;
   font-weight: 600;
+  width: 100%;
 }
 
 .main-left-subheader {
   font-size: 2rem;
-  line-height: 2.8rem;
+  line-height: 3rem;
   font-weight: 400;
   width: 70%;
   padding: 3.2rem 0;
 }
 
-img {
-  max-width: 40rem;
+.daydreamer-pic {
+  max-width: 45rem;
 }
 
 /* ************************ End main section ************************ */
-
-/* ************************ Start stack section ************************ */
-
-#stack-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--clr-lavender-light);
-  width: 100%;
-  height: 100vh;
-}
-
-.stack-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-  border: 1px solid var(--clr-black);
-  box-shadow: 1rem 1rem var(--clr-black);
-  width: 60%;
-  padding: 5rem;
-}
-
-.stack-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.stack-right {
-  border: 1px solid var(--clr-black);
-  background: var(--clr-primary-pink);
-  color: var(--clr-white);
-  box-shadow: 0.3rem -0.3rem var(--clr-black);
-  padding: 3rem;
-}
-
-.stack-pic {
-  padding: 0 3rem;
-}
-
-.stack-right-header {
-  font-size: 2rem;
-  color: var(--clr-white);
-  margin-bottom: 1rem;
-}
-
-.stack-right-subheader {
-  font-weight: 400;
-  line-height: 1.5rem;
-  text-align: left;
-  font-size: 1rem;
-  color: var(--clr-white);
-}
-
-/* ************************ End stack section ************************ */
 
 /* ************************ Start comments section ************************ */
 
@@ -260,9 +203,25 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: var(--clr-lavender-light);
   width: 100%;
-  padding: 9rem 4rem 10rem;
+  height: 100vh;
+  padding: 10rem 20rem;
+}
+
+.comments-section-wrapper {
+  padding: 5rem;
+}
+
+.top-border-purple {
+  background: linear-gradient(
+    to right,
+    var(--clr-primary-purple) 10%,
+    var(--clr-primary-pink)
+  );
+  border-radius: 2px 2px 0 0;
+  width: 100%;
+  height: 1rem;
 }
 
 .comments-top,
@@ -275,28 +234,16 @@ img {
   margin: 0 auto;
 }
 
-.comments-top {
-  padding: 6rem 4.5rem 0;
-}
-.comments-bottom {
-  padding: 0 4.5rem 6rem;
-}
-
-.comments-header-wrapper {
-  padding: 0 4rem;
-}
-
-.comments-header {
-  text-align: center;
-}
-
-.comments-header h2 {
+.comments-top h2 {
   font-size: 4.8rem;
   line-height: 6rem;
+  padding: 1rem;
 }
-.comments-header p {
+.comments-top p {
   font-size: 1.8rem;
   line-height: 3rem;
+  text-align: center;
+  padding: 1rem;
 }
 
 .comments-area-wrapper {
@@ -317,7 +264,7 @@ img {
   color: var(--clr-black);
   border: 1px solid var(--clr-black);
   box-shadow: 0.5rem 0.5rem var(--clr-black);
-  border-radius: 0.2rem;
+  border-radius: 0 0 2px 2px;
 
   font-size: 1.2rem;
   line-height: 1.6rem;
@@ -327,6 +274,70 @@ img {
 }
 
 /* ************************ End comments section ************************ */
+
+/* ************************ Start stack section ************************ */
+
+#stack-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 10rem 20rem;
+}
+
+.stack-wrapper {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--clr-black);
+  box-shadow: 1rem 1rem var(--clr-black);
+  border-radius: 2px;
+  max-width: 128rem;
+  padding: 6rem;
+}
+
+.stack-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stack-right {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-primary-pink);
+  border: 2px solid var(--clr-black);
+  box-shadow: 5px -5px var(--clr-black);
+  border-radius: 2px;
+  color: var(--clr-white);
+  padding: 4.8rem;
+  min-width: 30rem;
+  max-width: 40rem;
+}
+
+.bookstack-pic {
+  max-width: 50rem;
+  padding: 0 3rem;
+}
+
+.stack-right-header {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.stack-right-subheader {
+  font-weight: 400;
+  line-height: 2.5rem;
+  text-align: left;
+  font-size: 1.6rem;
+  color: var(--clr-white);
+}
+
+/* ************************ End stack section ************************ */
 
 /* ************************ Start Ideas section ************************ */
 

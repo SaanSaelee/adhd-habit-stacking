@@ -56,7 +56,7 @@ button {
 
 /* ************************ END BASE STYLES ************************ */
 
-/* ************************ Start Button ************************ */
+/* ************************ START BUTTON STYLES ************************ */
 
 .pink-btn {
   background: var(--clr-primary-pink);
@@ -69,15 +69,15 @@ button {
   box-shadow: 10px 10px var(--clr-black);
 }
 
-.purple-btn,
-.article-btn {
+.purple-btn {
   background: var(--clr-primary-purple);
-  border: 1px solid var(--clr-black);
-  box-shadow: 10px 10px var(--clr-black);
+  border: 2px solid var(--clr-black);
   border-radius: 2px;
 }
 
-.ideas-btn {
+.ideas-btn-main,
+.ideas-btn-random {
+  box-shadow: 10px 10px var(--clr-black);
   animation: ideas-btn 1000ms infinite alternate;
 }
 
@@ -105,9 +105,9 @@ button {
   position: relative;
 }
 
-/* ************************ End Button ************************ */
+/* ************************ END BUTTON STYLES ************************ */
 
-/* ************************  Navbar ************************ */
+/* ************************ START NAVBAR ************************ */
 
 #navbar {
   background: linear-gradient(
@@ -151,9 +151,9 @@ button {
   font-weight: 700;
 }
 
-/* ************************ End Navbar ************************ */
+/* ************************ END NAVBAR ************************ */
 
-/* ************************ Main section ************************ */
+/* ************************ START MAIN ************************ */
 
 #main-section {
   display: flex;
@@ -161,6 +161,7 @@ button {
   align-items: center;
   width: 100%;
   height: 100vh;
+  padding: 10rem 20rem;
 }
 
 .main-wrapper {
@@ -168,7 +169,6 @@ button {
   justify-content: center;
   align-items: center;
   max-width: 1280px;
-  padding: 10rem;
 }
 
 .main-left {
@@ -194,11 +194,11 @@ button {
   max-width: 45rem;
 }
 
-/* ************************ End main section ************************ */
+/* ************************ END MAIN ************************ */
 
-/* ************************ Start comments section ************************ */
+/* ************************ START STORIES ************************ */
 
-#comments-section {
+#stories-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -209,7 +209,7 @@ button {
   padding: 10rem 20rem;
 }
 
-.comments-section-wrapper {
+.stories-section-wrapper {
   padding: 5rem;
 }
 
@@ -224,8 +224,8 @@ button {
   height: 1rem;
 }
 
-.comments-top,
-.comments-bottom {
+.stories-top,
+.stories-bottom {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -234,30 +234,30 @@ button {
   margin: 0 auto;
 }
 
-.comments-top h2 {
+.stories-top h2 {
   font-size: 4.8rem;
   line-height: 6rem;
   padding: 1rem;
 }
-.comments-top p {
+.stories-top p {
   font-size: 1.8rem;
   line-height: 3rem;
   text-align: center;
   padding: 1rem;
 }
 
-.comments-area-wrapper {
+.stories-area-wrapper {
   display: flex;
   padding: 25px;
 }
 
-.comments-container {
+.stories-container {
   padding: 0 15px;
   width: 100%;
   margin: 0 auto;
 }
 
-.comments {
+.stories {
   display: flex;
   flex-direction: row;
   background: #fff;
@@ -273,7 +273,7 @@ button {
   height: 100%;
 }
 
-/* ************************ End comments section ************************ */
+/* ************************ END STORIES ************************ */
 
 /* ************************ Start stack section ************************ */
 
@@ -290,7 +290,7 @@ button {
   display: flex;
   justify-content: center;
   background: #fff;
-  border: 1px solid var(--clr-black);
+  border: 2px solid var(--clr-black);
   box-shadow: 1rem 1rem var(--clr-black);
   border-radius: 2px;
   max-width: 128rem;
@@ -341,35 +341,73 @@ button {
 
 /* ************************ Start Ideas section ************************ */
 
-/* .idea-box {
-  background: var(--clr-white);
+#ideas-section {
+  background: var(--clr-lavender-light);
+  width: 100%;
+  height: 80vh;
+  padding: 20rem;
+}
+
+.ideas-section-wrapper {
+  background: var(--clr-primary-purple);
+  border: 2px solid var(--clr-black);
+  box-shadow: 10px 10px var(--clr-black);
+  border-radius: 2px;
+  padding: 6rem;
+}
+
+.ideas-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ideas-left h2 {
+  font-size: 4.8rem;
+  line-height: 6rem;
+  padding: 1rem;
+}
+.ideas-left p {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  text-align: left;
+  padding: 1rem;
+}
+
+.ideas-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 2px solid var(--clr-black);
+  box-shadow: 10px 10px var(--clr-black);
+  border-radius: 2px;
   position: relative;
   width: 100%;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 0 10px #888888;
-  border-radius: 5px;
-  border-top: 3rem solid var(--clr-teal);
-} */
+  min-height: 20rem;
+  margin: 5rem;
+}
 
-/* .idea-box p {
+.ideas-box p {
   color: var(--clr-black);
   text-align: center;
-  font-weight: 900;
-  margin: auto;
-  font-size: 2rem;
-  padding: 1.5rem;
+  font-weight: 500;
+  font-size: 3rem;
+  padding: 3rem;
   letter-spacing: 0.1rem;
-} */
+  height: 100%;
+  width: 100%;
+}
 
 /* ************************ End Ideas section ************************ */
 
 /* ************************ Footer ************************ */
 
-/* footer {
+footer {
   background: var(--clr-white);
   height: 200px;
-  box-shadow: 0 -1px 30px var(--clr-shadow-gray);
+  box-shadow: 0 10px 30px var(--clr-shadow-gray);
   font-size: 1.5rem;
   display: inline-flex;
   justify-content: space-evenly;
@@ -378,22 +416,22 @@ button {
   padding: 2rem 0;
   width: 100%;
   height: auto;
-} */
+}
 
-/* .footer-nav-links {
+.footer-nav-links {
   display: flex;
   flex-direction: column;
-} */
+}
 
-/* .footer-nav-links li {
+.footer-nav-links li {
   margin: 0.5rem;
   cursor: pointer;
-} */
+}
 
-/* .footer-header {
+.footer-header {
   font-weight: 900;
   cursor: auto;
-} */
+}
 
 /* ************************ End Footer ************************ */
 

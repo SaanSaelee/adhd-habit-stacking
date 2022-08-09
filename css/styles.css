@@ -387,6 +387,9 @@ button {
 /* ************************ START IDEAS SECTION ************************ */
 
 #ideas-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
   padding: 10rem;
@@ -400,7 +403,6 @@ button {
   border-radius: 2px;
   padding: 6rem;
   max-width: 1080px;
-  margin: auto;
 }
 
 .ideas-wrapper {
@@ -475,7 +477,7 @@ button {
   font-size: 2rem;
   width: 100%;
   height: auto;
-  padding: 2rem 0;
+  /* padding: 5rem; */
 }
 
 .footer-nav-links {

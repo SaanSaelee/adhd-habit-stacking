@@ -161,7 +161,7 @@ button {
   align-items: center;
   width: 100%;
   height: 100vh;
-  padding: 10rem 20rem;
+  padding: 10rem;
 }
 
 .main-wrapper {
@@ -192,6 +192,9 @@ button {
 
 .daydreamer-pic {
   max-width: 45rem;
+  position: relative;
+  left: -10rem;
+  z-index: -100;
 }
 
 /* ************************ END MAIN ************************ */
@@ -238,6 +241,8 @@ button {
   font-size: 4.8rem;
   line-height: 6rem;
   padding: 1rem;
+  position: relative;
+  z-index: 1;
 }
 .stories-top p {
   font-size: 1.8rem;
@@ -254,7 +259,6 @@ button {
 .stories-container {
   padding: 0 15px;
   width: 100%;
-  margin: 0 auto;
 }
 
 .stories {
@@ -271,6 +275,12 @@ button {
   text-align: center;
   padding: 25px;
   height: 100%;
+}
+
+.handshake {
+  position: relative;
+  top: 2rem;
+  z-index: 0;
 }
 
 /* ************************ END STORIES ************************ */
@@ -344,8 +354,8 @@ button {
 #ideas-section {
   background: var(--clr-lavender-light);
   width: 100%;
-  height: 80vh;
-  padding: 20rem;
+  height: 100vh;
+  padding: 10rem;
 }
 
 .ideas-section-wrapper {
@@ -363,11 +373,13 @@ button {
 }
 
 .ideas-left h2 {
+  color: #fff;
   font-size: 4.8rem;
   line-height: 6rem;
   padding: 1rem;
 }
 .ideas-left p {
+  color: #fff;
   font-size: 1.8rem;
   line-height: 3rem;
   text-align: left;
@@ -389,33 +401,32 @@ button {
   margin: 5rem;
 }
 
-.ideas-box p {
+.ideas {
   color: var(--clr-black);
-  text-align: center;
-  font-weight: 500;
+  border-top: 3rem solid var(--clr-primary-pink);
   font-size: 3rem;
-  padding: 3rem;
-  letter-spacing: 0.1rem;
-  height: 100%;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-align: center;
   width: 100%;
+  height: 100%;
+  padding: 3rem;
 }
 
 /* ************************ End Ideas section ************************ */
 
 /* ************************ Footer ************************ */
 
-footer {
-  background: var(--clr-white);
-  height: 200px;
-  box-shadow: 0 10px 30px var(--clr-shadow-gray);
-  font-size: 1.5rem;
+#footer {
   display: inline-flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 6rem;
-  padding: 2rem 0;
+  background: var(--clr-white);
+  box-shadow: 0 10px 30px var(--clr-shadow-gray);
+  font-size: 1.5rem;
   width: 100%;
   height: auto;
+  padding: 2rem 0;
 }
 
 .footer-nav-links {

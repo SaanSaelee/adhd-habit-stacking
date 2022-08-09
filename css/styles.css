@@ -24,6 +24,10 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: var(--clr-primary-purple);
+}
+
 html {
   width: 100%;
   font-size: 62.5%;
@@ -227,11 +231,11 @@ button {
 }
 
 .top-border-short {
-height: 1rem;
+  height: 1rem;
 }
 
 .top-border-tall {
-height: 2rem;
+  height: 2rem;
 }
 
 .stories-top {
@@ -412,12 +416,20 @@ height: 2rem;
   padding: 1rem;
 }
 
+.ideas-left h2::selection {
+  background: var(--clr-primary-pink);
+}
+
 .ideas-left p {
   color: #fff;
   font-size: 1.8rem;
   line-height: 3rem;
   text-align: left;
   padding: 1rem;
+}
+
+.ideas-left p::selection {
+  background: var(--clr-primary-pink);
 }
 
 .ideas-box {

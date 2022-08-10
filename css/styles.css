@@ -198,7 +198,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10rem;
+  width: 100%;
+}
+
+.main-left {
+  padding: 0 0 0 10rem;
 }
 
 .main-left-header {
@@ -508,7 +512,6 @@ button {
 
 /* ***************** Large devices only **************************************************************************** */
 @media (min-width: 1200px) and (max-width: 1442px) {
-
   /* .main-wrap {
     max-width: 1080px;
   } */
@@ -518,18 +521,17 @@ button {
     font-weight: 700;
     line-height: 5.5rem;
   } */
-  
+
   /* .main-left-subheader {
     font-size: calc(2rem - 20%);
     line-height: 3rem;
     margin: 3rem 0;
   } */
-  
+
   .daydreamer-pic {
     /* max-width: 40rem; */
     /* left: 0; */
   }
-
 }
 
 /* ***************** Medium devices only ***************** */

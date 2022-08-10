@@ -112,6 +112,27 @@ button {
 
 /* ************************ END BUTTON STYLES ************************ */
 
+/* ************************ START TOP BAR BORDER ************************ */
+
+.top-border {
+  background: linear-gradient(
+    to right,
+    var(--clr-primary-purple) 10%,
+    var(--clr-primary-pink)
+  );
+  width: 100%;
+}
+
+.top-border-short {
+  height: 1rem;
+}
+
+.top-border-tall {
+  height: 2rem;
+}
+
+/* ************************ END TOP BAR BORDER ************************ */
+
 /* ************************ START NAVBAR ************************ */
 
 #navbar {
@@ -149,7 +170,7 @@ button {
 
 .nav:hover {
   color: var(--clr-black);
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .logo-wrapper {
@@ -224,25 +245,8 @@ button {
 }
 
 .stories-section-wrapper {
-  padding: 5rem;
+  padding: 0 15rem;
   max-width: 1280px;
-}
-
-.top-border {
-  background: linear-gradient(
-    to right,
-    var(--clr-primary-purple) 10%,
-    var(--clr-primary-pink)
-  );
-  width: 100%;
-}
-
-.top-border-short {
-  height: 1rem;
-}
-
-.top-border-tall {
-  height: 2rem;
 }
 
 .stories-top {
@@ -412,14 +416,19 @@ button {
   border: 2px solid var(--clr-black);
   box-shadow: 10px 10px var(--clr-black);
   border-radius: 2px;
-  padding: 6rem;
   max-width: 1080px;
+  /* width: 100%; */
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ideas-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .ideas-left h2 {
@@ -529,6 +538,15 @@ button {
 
 /* ***************** Medium devices only ***************** */
 @media (min-width: 992px) and (max-width: 1199px) {
+
+#main-section {
+
+}
+
+.stories-section-wrapper {
+  width: 100%;
+}
+
 }
 
 /* ***************** Small devices only ***************** */

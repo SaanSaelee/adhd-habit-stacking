@@ -212,7 +212,7 @@ button {
   line-height: 3rem;
   font-weight: 400;
   width: 80%;
-  padding: 3.2rem 0;
+  margin: 3.2rem 0;
 }
 
 .daydreamer-pic {
@@ -256,9 +256,11 @@ button {
 }
 
 .stack-right {
-  display: block;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   background: var(--clr-primary-pink);
   border: 2px solid var(--clr-black);
   box-shadow: 5px -5px var(--clr-black);

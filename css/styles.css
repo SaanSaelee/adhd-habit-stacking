@@ -147,6 +147,11 @@ button {
   padding: 0 1rem;
 }
 
+.nav:hover {
+  color: var(--clr-black);
+  opacity: .5;
+}
+
 .logo-wrapper {
   padding: 1.6rem 3.2rem;
 }
@@ -519,7 +524,7 @@ button {
 /* ************************ END FOOTER ************************ */
 
 /* ***************** Large devices only **************************************************************************** */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1800px) {
 }
 
 /* ***************** Medium devices only ***************** */
@@ -531,5 +536,5 @@ button {
 }
 
 /* ***************** Extra Small devices only ***************** */
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
 }

@@ -884,7 +884,7 @@ button {
   /* START MAIN */
 
   #main-section {
-    height: 70vh;
+    height: 80vh;
   }
 
   .main-left-header {
@@ -909,7 +909,7 @@ button {
   /* START STACK */
 
   #stack-section {
-    height: 50vh;
+    height: 70vh;
   }
 
   .stack-wrap {
@@ -936,7 +936,7 @@ button {
   /* START STORIES */
 
   #stories-section {
-    height: 70vh;
+    height: 80vh;
   }
 
   .stories-section-wrap {
@@ -979,7 +979,7 @@ button {
   /* START IDEAS */
 
   #ideas-section {
-    height: 50vh;
+    height: 70vh;
   }
 
   .ideas-section-wrap {
@@ -1027,4 +1027,6 @@ button {
 
 /* ***************** Extra Small devices only ***************** */
 @media only screen and (max-width: 767px) {
+
+
 }

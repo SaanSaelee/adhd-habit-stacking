@@ -117,22 +117,25 @@ button {
   color: var(--clr-white);
 }
 
-.pink-btn {
-  background: var(--clr-primary-pink);
+.contact-btn {
   box-shadow: 0 0 var(--clr-black);
   transition: box-shadow 300ms ease;
 }
 
-.pink-btn:hover {
+.contact-btn:hover {
   box-shadow: 10px 10px var(--clr-black);
+}
+
+.pink-btn {
+  background: var(--clr-primary-pink);
 }
 
 .purple-btn {
   background: var(--clr-primary-purple);
 }
 
-.ideas-btn-main,
-.ideas-btn-random {
+.ideas-btn-one,
+.ideas-btn-two {
   box-shadow: 10px 10px var(--clr-black);
   animation: ideas-btn 1000ms infinite alternate;
 }
@@ -301,13 +304,13 @@ button {
 /* ************************ START STORIES ************************ */
 
 #stories-section {
-  width: 100%;
-  height: 100vh;
-  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #fff;
+  width: 100%;
+  height: 100vh;
 }
 
 .stories-section-wrap {
@@ -372,6 +375,7 @@ button {
 /* ************************ END STORIES ************************ */
 
 /* ************************ START QUOTES SECTION ************************ */
+
 #quotes-section {
   display: flex;
   justify-content: center;
@@ -866,9 +870,22 @@ button {
     font-size: 1.2rem;
   }
 
+  .contact-btn:hover {
+    box-shadow: 5px 5px var(--clr-black);
+  }
+
+  .ideas-btn-one,
+  .ideas-btn-two {
+    box-shadow: 5px 5px var(--clr-black);
+  }
+
   /* END BUTTON */
 
   /* START MAIN */
+
+  #main-section {
+    height: 70vh;
+  }
 
   .main-left-header {
     font-size: 3.6rem;
@@ -890,6 +907,10 @@ button {
   /* END MAIN */
 
   /* START STACK */
+
+  #stack-section {
+    height: 50vh;
+  }
 
   .stack-wrap {
     padding: 2rem;
@@ -913,6 +934,10 @@ button {
   /* END STACK */
 
   /* START STORIES */
+
+  #stories-section {
+    height: 70vh;
+  }
 
   .stories-section-wrap {
     max-width: 680px;
@@ -952,6 +977,10 @@ button {
   /* END QUOTES */
 
   /* START IDEAS */
+
+  #ideas-section {
+    height: 50vh;
+  }
 
   .ideas-section-wrap {
     max-width: 680px;

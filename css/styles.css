@@ -21,8 +21,8 @@
 ::after {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 ::selection {
@@ -30,12 +30,13 @@
 }
 
 html {
+  width: 100%;
+  height: 100%;
   font-size: 62.5%;
-  font-family: "Montserrat", sans-serif, helvetica;
 }
 
 body {
-  width: 100%;
+  font-family: "Montserrat", sans-serif, helvetica;
 }
 
 li {
@@ -57,7 +58,7 @@ button {
 
 /* ************************ START NAVBAR ************************ */
 
-#navbar {
+header {
   background: linear-gradient(
     to left,
     var(--clr-primary-purple) 20%,
@@ -67,39 +68,51 @@ button {
   color: var(--clr-white);
   font-size: 2.5rem;
   position: fixed;
-  z-index: 1;
   width: 100%;
   opacity: 0.95;
+  z-index: 1;
 }
 
-.navbar-wrap {
+.navbar {
+  min-height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* width: 100%; */
+  padding: 0 2.4rem;
 }
 
-.nav-links ul {
+.nav-menu {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
   gap: 3rem;
 }
 
-.nav:hover {
+.nav-link:hover {
   color: var(--clr-black);
   opacity: 0.5;
-}
-
-.logo-wrap {
-  padding: 1.6rem 3.2rem;
 }
 
 .logo {
   font-family: var(--font-VIC), sans-serif, Arial, Helvetica;
   font-size: 5rem;
   font-weight: 700;
+  padding: 1.6rem 3.2rem;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
 }
 
 /* ************************ END NAVBAR ************************ */
@@ -135,8 +148,14 @@ button {
 
 .ideas-btn-one,
 .ideas-btn-two {
-  box-shadow: 10px 10px var(--clr-black);
+  box-shadow: 0px 0px var(--clr-black);
+  transition: box-shadow 300ms ease;
   animation: ideas-btn 1000ms infinite alternate;
+}
+
+.ideas-btn-one:hover,
+.ideas-btn-two:hover {
+  box-shadow: 10px 10px var(--clr-black);
 }
 
 @keyframes ideas-btn {
@@ -162,24 +181,6 @@ button {
   left: 0;
   position: relative;
 }
-
-/* .toggle-btn {
-  width: 35px;
-  position: absolute;
-  right: 3rem;
-  top: 2.5rem;
-  display: none;
-  cursor: pointer;
-}
-
-.toggle-btn span {
-  display: inline-block;
-  width: 100%;
-  height: 2px;
-  background-color: red;
-  float: left;
-  margin-bottom: 8px;
-} */
 
 /* ************************ END BUTTON STYLES ************************ */
 
@@ -235,12 +236,8 @@ button {
   font-size: 2rem;
   line-height: 3rem;
   font-weight: 400;
-  width: 80%;
   margin: 3.2rem 0;
-}
-
-.main-right {
-  /* width: 100%; */
+  width: 80%;
 }
 
 .daydreamer-pic {
@@ -270,10 +267,10 @@ button {
   border: 2px solid var(--clr-black);
   box-shadow: 1rem 1rem var(--clr-black);
   border-radius: 2px;
-  padding: 5rem;
-  gap: 5rem;
   max-width: 1280px;
   margin: 5rem 0;
+  padding: 5rem;
+  gap: 5rem;
 }
 
 .stack-left {
@@ -534,19 +531,19 @@ button {
   width: 100%;
   padding: 5rem 0;
 }
+
 /* ************************ END FOOTER ************************ */
 
 /* ***************** Large devices only **************************************************************************** */
-@media (max-width: 1920px) {
-}
 
 @media (min-width: 1200px) and (max-width: 1440px) {
   /* START NAVBAR */
-  #navbar {
+
+  .navbar-wrap {
     font-size: 2.2rem;
   }
 
-  .nav-links ul {
+  #nav-items ul {
     gap: 2rem;
   }
 
@@ -569,20 +566,15 @@ button {
 
   .main-left-header {
     font-size: 4.2rem;
-    line-height: 5rem;
   }
 
   .main-left-subheader {
     font-size: 1.8rem;
-    line-height: 3rem;
-    font-weight: 400;
     margin: 2.6rem 0;
   }
 
   .daydreamer-pic {
     max-width: 40rem;
-    position: relative;
-    left: -10rem;
   }
 
   /* END MAIN */
@@ -590,9 +582,9 @@ button {
   /* START STACK */
 
   .stack-wrap {
+    max-width: 980px;
     padding: 4rem;
     gap: 4rem;
-    max-width: 980px;
   }
 
   .stack-right {
@@ -600,11 +592,11 @@ button {
   }
 
   .stack-right-header {
-    font-size: 3rem;
+    font-size: 3.6rem;
   }
 
   .stack-right-subheader {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 2.6rem;
   }
 
@@ -616,12 +608,7 @@ button {
     max-width: 1080px;
   }
 
-  .stories-header h2 {
-    font-size: 4rem;
-  }
-
   .stories-header p {
-    font-size: 1.8rem;
     line-height: 3rem;
   }
 
@@ -631,52 +618,10 @@ button {
   }
 
   .handshake-pic {
-    max-width: 15rem;
+    max-width: 17rem;
   }
 
   /* END STORIES */
-
-  /* START QUOTES */
-
-  .quotes-section {
-    max-width: 980px;
-  }
-
-  .quotes-section h2 {
-    font-size: 3.6rem;
-    line-height: 5rem;
-  }
-
-  /* END QUOTES */
-
-  /* START IDEAS */
-
-  .ideas-section-wrap {
-    max-width: 880px;
-    padding: 4rem;
-  }
-  .ideas-left h2 {
-    font-size: 4rem;
-    line-height: 5rem;
-  }
-
-  .ideas-left p {
-    font-size: 1.8rem;
-    line-height: 3rem;
-  }
-
-  .ideas-box {
-    margin: 4rem;
-  }
-
-  .ideas {
-    font-size: 2.2rem;
-    width: 30rem;
-    height: 20rem;
-    padding: 2rem;
-  }
-
-  /* END IDEAS */
 
   /* START FOOTER  */
 
@@ -684,13 +629,8 @@ button {
     padding: 5rem 0;
   }
 
-  .footer-nav-links li {
-    font-size: 1.8rem;
-  }
-
   .copyright {
-    font-size: 1.4rem;
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 
   /* END FOOTER */
@@ -700,11 +640,11 @@ button {
 @media (min-width: 992px) and (max-width: 1199px) {
   /* START NAVBAR */
 
-  #navbar {
+  .navbar-wrap {
     font-size: 1.8rem;
   }
 
-  .nav-links ul {
+  #nav-items ul {
     gap: 1.6rem;
   }
 
@@ -725,12 +665,12 @@ button {
     font-size: 1.4rem;
   }
 
-  .pink-btn:hover {
+  .contact-btn:hover {
     box-shadow: 5px 5px var(--clr-black);
   }
 
-  .ideas-btn-main,
-  .ideas-btn-random {
+  .ideas-btn-one:hover,
+  .ideas-btn-two:hover {
     box-shadow: 5px 5px var(--clr-black);
   }
 
@@ -751,8 +691,6 @@ button {
 
   .daydreamer-pic {
     max-width: 40rem;
-    position: relative;
-    left: -10rem;
   }
 
   /* END MAIN */
@@ -761,22 +699,22 @@ button {
 /* START STACK */
 
 .stack-wrap {
-  padding: 3rem;
-  gap: 3rem;
-  max-width: 780px;
+  max-width: 880px;
+  padding: 3.5rem;
+  gap: 3.5rem;
 }
 
 .stack-right {
-  padding: 3rem;
+  padding: 3.5rem;
 }
 
 .stack-right-header {
-  font-size: 2.6rem;
+  font-size: 3.2rem;
 }
 
 .stack-right-subheader {
-  font-size: 1.4rem;
-  line-height: 2.2rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 
 /* END STACK */
@@ -787,31 +725,21 @@ button {
   max-width: 880px;
 }
 
-.stories-header h2 {
-  font-size: 3.6rem;
-}
-
 .stories-header p {
-  font-size: 1.6rem;
-  line-height: 2.8rem;
+  line-height: 3.2rem;
 }
 
 .stories {
-  font-size: 1.4rem;
-  padding: 3rem;
+  padding: 3.5rem;
 }
 
 .handshake-pic {
-  max-width: 12rem;
+  max-width: 15rem;
 }
 
 /* END STORIES */
 
 /* START QUOTES */
-
-.quotes-section {
-  max-width: 780px;
-}
 
 .quotes-section h2 {
   font-size: 3.2rem;
@@ -823,28 +751,24 @@ button {
 /* START IDEAS */
 
 .ideas-section-wrap {
-  max-width: 780px;
+  max-width: 880px;
   padding: 3rem;
 }
 .ideas-left h2 {
-  font-size: 3.6rem;
+  font-size: 4rem;
   line-height: 4.6rem;
 }
 
 .ideas-left p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 2.6rem;
-}
-
-.ideas-box {
-  margin: 3rem;
 }
 
 .ideas {
   font-size: 2rem;
-  width: 28rem;
-  height: 18rem;
-  padding: 1.6rem;
+  width: 32rem;
+  height: 22rem;
+  padding: 2rem;
 }
 
 /* END IDEAS */
@@ -856,12 +780,12 @@ button {
 }
 
 .footer-nav-links li {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .copyright {
-  font-size: 1.2rem;
-  padding: 3rem 0;
+  font-size: 1.4rem;
+  padding: 2.5rem 0;
 }
 
 /* END FOOTER */
@@ -870,11 +794,11 @@ button {
 @media (min-width: 768px) and (max-width: 991px) {
   /* START NAVBAR */
 
-  #navbar {
+  .navbar-wrap {
     font-size: 1.6rem;
   }
 
-  .nav-links ul {
+  #nav-items ul {
     gap: 1.4rem;
   }
 
@@ -899,8 +823,8 @@ button {
     box-shadow: 5px 5px var(--clr-black);
   }
 
-  .ideas-btn-one,
-  .ideas-btn-two {
+  .ideas-btn-one:hover,
+  .ideas-btn-two:hover {
     box-shadow: 5px 5px var(--clr-black);
   }
 
@@ -909,19 +833,18 @@ button {
   /* START MAIN */
 
   .main-left-header {
-    font-size: 3.6rem;
-    line-height: 4.4rem;
+    font-size: 3.2rem;
+    line-height: 4rem;
   }
 
   .main-left-subheader {
     font-size: 1.4rem;
-    line-height: 2.6rem;
+    line-height: 2.4rem;
     margin: 2rem 0;
   }
 
   .daydreamer-pic {
     max-width: 30rem;
-    position: relative;
     left: -5rem;
   }
 
@@ -934,9 +857,9 @@ button {
   }
 
   .stack-wrap {
+    max-width: 680px;
     padding: 2rem;
     gap: 2rem;
-    max-width: 680px;
   }
 
   .stack-right {
@@ -944,11 +867,11 @@ button {
   }
 
   .stack-right-header {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
   }
 
   .stack-right-subheader {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 2rem;
   }
 
@@ -983,12 +906,11 @@ button {
   /* START QUOTES */
 
   .quotes-section {
-    max-width: 580px;
-    margin: 10rem 0;
+    max-width: 680px;
   }
 
   .quotes-section h2 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     line-height: 4.2rem;
   }
 
@@ -1034,11 +956,11 @@ button {
   }
 
   .footer-nav-links li {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .copyright {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 2rem 0;
   }
 }
@@ -1047,36 +969,46 @@ button {
 @media only screen and (max-width: 767px) {
   /* START NAV */
 
-  .logo-wrap {
-    padding: 1rem 2rem;
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--clr-primary-purple);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
   }
 
   .logo {
     font-size: 4rem;
+    padding: 1rem 2rem;
   }
 
   /* END NAV */
-
-  /* START BUTTON */
-
-  .toggle-btn {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    width: 100%;
-    border-top: 1px solid #fff;
-    padding-top: 10px;
-    margin-top: 10px;
-  }
-
-  .nav-links.show {
-    display: block;
-    text-align: center;
-  }
-
-  /* END BUTTON */
 
   /* START MAIN */
 

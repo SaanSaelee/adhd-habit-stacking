@@ -839,9 +839,163 @@ button {
 
 /* ***************** Small devices only ***************** */
 @media (min-width: 768px) and (max-width: 991px) {
+  /* START NAVBAR */
+
+  #navbar {
+    font-size: 1.6rem;
+  }
+
+  .nav-links ul {
+    gap: 1.4rem;
+  }
+
+  .logo-wrap {
+    padding: 1rem 2.2rem;
+  }
+
+  .logo {
+    font-size: 3.2rem;
+  }
+
+  /* END NAVBAR */
+
+  /* START BUTTON */
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  /* END BUTTON */
+
+  /* START MAIN */
+
+  .main-left-header {
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+  }
+
+  .main-left-subheader {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    margin: 2rem 0;
+  }
+
+  .daydreamer-pic {
+    max-width: 30rem;
+    position: relative;
+    left: -5rem;
+  }
+
+  /* END MAIN */
+
+  /* START STACK */
+
+  .stack-wrap {
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 680px;
+  }
+
+  .stack-right {
+    padding: 2rem;
+  }
+
+  .stack-right-header {
+    font-size: 2.4rem;
+  }
+
+  .stack-right-subheader {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  /* END STACK */
+
+  /* START STORIES */
+
+  .stories-section-wrap {
+    max-width: 680px;
+  }
+
+  .stories-header h2 {
+    font-size: 3.4rem;
+  }
+
+  .stories-header p {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+  }
+
+  .stories {
+    font-size: 1.2rem;
+    padding: 2rem;
+  }
+
+  .handshake-pic {
+    max-width: 10rem;
+  }
+
+  /* END STORIES */
+
+  /* START QUOTES */
+
+  .quotes-section-header {
+    max-width: 580px;
+  }
+
+  .quotes-section-header h2 {
+    font-size: 2.6rem;
+    line-height: 4.2rem;
+  }
+
+  /* END QUOTES */
+
+  /* START IDEAS */
+
+  .ideas-section-wrap {
+    max-width: 680px;
+    padding: 2.8rem;
+  }
+  .ideas-left h2 {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+
+  .ideas-left p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  .ideas-box {
+    margin: 2.6rem;
+  }
+
+  .ideas {
+    font-size: 1.8rem;
+    width: 26rem;
+    height: 16rem;
+    padding: 1.4rem;
+  }
+
+  /* END IDEAS */
+
+  /* START FOOTER  */
+
+  #footer {
+    padding: 2rem 0;
+  }
+
+  .footer-nav-links li {
+    font-size: 1.4rem;
+  }
+
+  .copyright {
+    font-size: 1rem;
+    padding: 2rem 0;
+  }
 }
 
 /* ***************** Extra Small devices only ***************** */
 @media only screen and (max-width: 767px) {
 }
-/*  */

@@ -273,6 +273,7 @@ button {
   padding: 5rem;
   gap: 5rem;
   max-width: 1280px;
+  margin: 5rem 0;
 }
 
 .stack-left {
@@ -336,6 +337,7 @@ button {
 
 .stories-section-wrap {
   max-width: 1280px;
+  margin: 5rem 0;
 }
 
 .stories-header {
@@ -403,7 +405,7 @@ button {
   align-items: center;
   background: var(--clr-lavender-light);
   width: 100%;
-  min-height: 30vh ;
+  min-height: 30vh;
 }
 
 .quotes-section {
@@ -513,14 +515,14 @@ button {
   width: 100%;
 }
 
+.footer-header {
+  font-weight: 600;
+}
+
 .footer-nav-links li {
   font-size: 2rem;
   padding: 1rem;
   cursor: pointer;
-}
-
-.footer-header {
-  font-weight: 600;
 }
 
 .copyright {
@@ -1081,22 +1083,21 @@ button {
   .main-wrap {
     flex-direction: column;
     max-width: 100%;
-    /* margin-top: 30rem; */
+    margin-top: 10rem;
   }
 
   .main-left {
     padding: 5rem;
-    /* margin-top: 10rem 0; */
   }
 
   .main-left-header {
-    font-size: 2.6rem;
-    line-height: 3.6rem;
+    font-size: 3.4rem;
+    line-height: 3.8rem;
   }
 
   .main-left-subheader {
-    font-size: 1.4rem;
-    line-height: 2.6rem;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
     width: 100%;
     margin: 2.2rem 0;
   }
@@ -1117,7 +1118,6 @@ button {
   /* START STACK */
 
   .stack-wrap {
-    display: flex;
     flex-direction: column;
     max-width: 90%;
   }
@@ -1127,13 +1127,28 @@ button {
     max-width: 100%;
   }
 
+  .stack-right-subheader {
+    font-size: 1.6rem;
+  }
+
   /* END STACK */
 
   /* START STORIES */
 
   .stories-section-wrap {
     max-width: 90%;
-    height: 100vh;
+  }
+
+  .stories-header {
+    padding: 0 3rem;
+  }
+
+  .stories-header h2 {
+    font-size: 3.4rem;
+  }
+
+  .stories-header p {
+    padding-bottom: 3rem;
   }
 
   .stories-wrap {
@@ -1152,12 +1167,13 @@ button {
 
   .quotes-section {
     max-width: 100%;
+    margin: 5rem 0;
   }
 
   .quotes-section h2 {
     font-size: 2rem;
     line-height: 3rem;
-    text-align: center;
+    padding: 0 3rem;
   }
 
   /* END QUOTES */
@@ -1180,16 +1196,12 @@ button {
     margin-top: 5rem;
   }
 
-  .ideas {
-    padding: 2rem;
-  }
-
   /* END IDEAS */
 
   /* START FOOTER */
 
   .footer-nav-links li {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .copyright {

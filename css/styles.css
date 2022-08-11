@@ -1015,7 +1015,7 @@ header {
   .main-wrap {
     flex-direction: column;
     max-width: 100%;
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
 
   .main-left {
@@ -1133,10 +1133,12 @@ header {
   /* START FOOTER */
 
   .footer-nav-links li {
+    font-size: 1.4rem;
     padding: 0.5rem;
   }
 
   .copyright {
+    font-size: 1rem;
     padding: 3rem 0;
   }
 

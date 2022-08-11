@@ -25,7 +25,9 @@ ideaButton.addEventListener("click", function () {
   let idea = document.querySelector(".ideas");
   idea.textContent = habit[Math.floor(Math.random() * habit.length)];
 });
-// ideaButton.addEventListener("click", function () {
-//   let idea = document.querySelector(".idea");
-//   idea.textContent = habit[Math.floor(Math.random() * habit.length)];
-// });
+
+let hamburger = document.getElementById("toggle-btn");
+
+hamburger.addEventListener("click", function () {
+  navToggle.classList.toggle("show");
+});

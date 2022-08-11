@@ -31,15 +31,22 @@
 
   <body>
     <!-- START NAVBAR -->
+
+    <div class="toggle-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <header>
       <nav id="navbar">
         <div class="navbar-wrap">
           <div class="logo-wrap">
             <a href="#top"><p class="logo">adhd</p></a>
           </div>
-          <div class="nav-links">
+          <div id="navToggle" class="nav-links">
             <ul>
-              <a class="nav" href="#top"><li>Home</li></a>
+              <li><a class="nav" href="#top">Home</a></li>
               <li><a class="nav" href="#stack-section">Habit</a></li>
               <li><a class="nav" href="#stories-section">Stories</a></li>
               <li><a class="nav" href="#ideas-section">Ideas</a></li>
@@ -180,7 +187,7 @@
 
       <!-- START QUOTE SECTION -->
       <section id="quotes-section">
-        <div class="quotes-section-header">
+        <div class="quotes-section">
           <h2>
             Experts say it takes approximately
             <span class="italic">21 days</span> to build a habit and

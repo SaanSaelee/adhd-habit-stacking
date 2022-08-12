@@ -841,7 +841,7 @@ header {
   /* START STACK */
 
   #stack-section {
-    height: 70vh;
+    min-height: 60vh;
   }
 
   .stack-wrap {
@@ -866,6 +866,10 @@ header {
   /* END STACK */
 
   /* START STORIES */
+
+  #stories-section {
+    min-height: 80vh;
+  }
 
   .stories-section-wrap {
     max-width: 680px;
@@ -907,7 +911,7 @@ header {
   /* START IDEAS */
 
   #ideas-section {
-    height: 70vh;
+    min-height: 60vh;
   }
 
   .ideas-section-wrap {

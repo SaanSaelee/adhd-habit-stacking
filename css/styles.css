@@ -998,6 +998,7 @@ header {
     width: 100%;
     text-align: center;
     transition: 0.3s;
+    font-size: 2rem;
   }
 
   .nav-item {

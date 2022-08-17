@@ -243,7 +243,7 @@ header {
 
 .daydreamer-pic {
   width: 100%;
-  min-width: 30rem;
+  max-width: 50rem;
 }
 
 /* ************************ END MAIN ************************ */
@@ -787,6 +787,7 @@ header {
 
   .main-wrap {
     flex-direction: column;
+    margin-top: 10rem;
   }
 
   .main-left-header {
@@ -799,6 +800,12 @@ header {
     margin: 2rem 0;
   }
 
+  .daydreamer-pic {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   /* END MAIN */
 
   /* START STACK */
@@ -806,6 +813,11 @@ header {
   .stack-wrap {
     padding: 2rem;
     gap: 2rem;
+  }
+
+  .stack-title {
+    font-size: 2.8rem;
+    line-height: 4.2rem;
   }
 
   .stack-right {
@@ -1068,7 +1080,6 @@ header {
   .ideas-section-wrap {
     flex-direction: column;
     padding: 3rem 2rem;
-
   }
 
   .ideas-left h2 {

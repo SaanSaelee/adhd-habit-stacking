@@ -1005,15 +1005,15 @@ header {
     min-height: 100vh;
   }
 
-  .stack-title {
-    font-size: 2.4rem;
-    line-height: 3.5rem;
-  }
-
   .stack-wrap {
     flex-direction: column;
     padding: 2rem;
     gap: 2rem;
+  }
+
+  .stack-title {
+    font-size: 2.4rem;
+    line-height: 3rem;
   }
 
   .stack-right {
@@ -1083,8 +1083,8 @@ header {
   }
 
   .ideas-left h2 {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
+    font-size: 3.4rem;
+    line-height: 4.2rem;
   }
 
   .ideas-left p {

@@ -69,8 +69,8 @@ header {
   font-size: 2.5rem;
   position: fixed;
   width: 100%;
-  opacity: 0.95;
   z-index: 1;
+  opacity: 0.95;
 }
 
 .navbar {
@@ -90,7 +90,7 @@ header {
 
 .nav-link:hover {
   color: var(--clr-black);
-  opacity: 0.5;
+  opacity: 0.65;
 }
 
 .logo {
@@ -254,6 +254,7 @@ header {
 
 #stack-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: var(--clr-lavender-light);
@@ -272,6 +273,18 @@ header {
   margin: 5rem 0;
   padding: 5rem;
   gap: 5rem;
+}
+
+.stack-header {
+  padding: 5rem 0;
+  width: 60%;
+}
+
+.stack-title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 5.5rem;
+  text-align: center;
 }
 
 .stack-left {
@@ -408,7 +421,7 @@ header {
 
 .quotes-section {
   padding: 5rem 0;
-  max-width: 1080px;
+  width: 60%;
 }
 
 .quotes-section h2 {
@@ -693,8 +706,17 @@ header {
 
 .stack-wrap {
   max-width: 880px;
-  padding: 3.5rem;
+  /* padding: 3.5rem; */
   gap: 3.5rem;
+}
+
+.stack-header {
+  width: 80%;
+}
+
+.stack-title {
+  font-size: 3.2rem;
+  line-height: 4.6rem;
 }
 
 .stack-right {
@@ -734,6 +756,11 @@ header {
 
 /* START QUOTES */
 
+.quotes-section {
+  /* padding: 5rem 0; */
+  width: 80%;
+}
+
 .quotes-section h2 {
   font-size: 3.2rem;
   line-height: 4.6rem;
@@ -753,7 +780,7 @@ header {
 }
 
 .ideas-left p {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   line-height: 2.6rem;
 }
 
@@ -979,6 +1006,10 @@ header {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  header {
+    /* opacity: 1; */
   }
 
   .nav-menu {

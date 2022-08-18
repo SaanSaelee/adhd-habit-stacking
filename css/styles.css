@@ -930,11 +930,11 @@ header {
 
   /* Creates an X icon */
   .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(405deg);
   }
 
   .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-405deg);
   }
 
   .nav-menu {
@@ -962,6 +962,10 @@ header {
   .logo {
     font-size: 4rem;
     padding: 1rem 2rem;
+  }
+
+  .contact-btn:hover {
+    box-shadow: 5px 5px var(--clr-black);
   }
 
   /* END NAV */

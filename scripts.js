@@ -37,6 +37,6 @@ hamburger.addEventListener("click", () => {
 document.querySelectorAll(".nav-link").forEach((n) =>
   n.addEventListener("click", () => {
     hamburger.classList.remove("active");
-    navMenu.classList.remove("navMenu");
+    navMenu.classList.remove("active");
   })
 );

@@ -30,8 +30,6 @@
 }
 
 html {
-  width: 100%;
-  height: 100%;
   font-size: 62.5%;
 }
 
@@ -79,6 +77,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 2.4rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .nav-menu {
@@ -97,7 +97,8 @@ header {
   font-family: var(--font-VIC), sans-serif, Arial, Helvetica;
   font-size: 5rem;
   font-weight: 700;
-  padding: 1.6rem 3.2rem;
+  padding: 1.6rem 0;
+  text-align: start;
 }
 
 .hamburger {

@@ -26,6 +26,9 @@ ideaButton.addEventListener("click", function () {
   idea.textContent = habit[Math.floor(Math.random() * habit.length)];
 });
 
+
+
+// Hamburger toggle
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 

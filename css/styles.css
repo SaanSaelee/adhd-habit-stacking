@@ -93,6 +93,10 @@ header {
   opacity: 0.65;
 }
 
+.nav-link:last-child:hover {
+  opacity: 1;
+}
+
 .logo {
   font-family: var(--font-VIC), sans-serif, Arial, Helvetica;
   font-size: 5rem;

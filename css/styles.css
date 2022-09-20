@@ -35,6 +35,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif, helvetica;
+  line-height: 1.5;
 }
 
 li {
@@ -64,7 +65,8 @@ header {
   );
   box-shadow: 0 1px 10px var(--clr-shadow-gray);
   color: var(--clr-white);
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-weight: 500;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -76,7 +78,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2.4rem;
+  padding: 0 1em;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -85,7 +87,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 .nav-link:hover {
@@ -101,8 +103,6 @@ header {
   font-family: var(--font-VIC), sans-serif, Arial, Helvetica;
   font-size: 5rem;
   font-weight: 700;
-  padding: 1.6rem 0;
-  text-align: start;
 }
 
 .hamburger {
@@ -129,7 +129,7 @@ header {
   border: 2px solid var(--clr-black);
   border-radius: 2px;
   letter-spacing: 0.2rem;
-  padding: 1.6rem 3.2rem;
+  padding: .7em 1.6em;
   font-weight: 600;
   font-size: 1.6rem;
   color: var(--clr-white);
@@ -141,7 +141,7 @@ header {
 }
 
 .contact-btn:hover {
-  box-shadow: 10px 10px var(--clr-black);
+  box-shadow: 5px 5px var(--clr-black);
 }
 
 .pink-btn {
@@ -229,9 +229,10 @@ header {
 }
 
 .main-left-header {
-  font-size: 4.8rem;
+  font-size: 6.25rem;
   font-weight: 700;
-  line-height: 5.5rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
 }
 
 .main-left-subheader {

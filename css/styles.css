@@ -36,6 +36,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif, helvetica;
   line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 li {
@@ -47,10 +48,8 @@ a {
   color: var(--clr-white);
 }
 
-button {
-  font-family: "Montserrat", sans-serif, Helvetica;
-  text-transform: uppercase;
-  cursor: pointer;
+img {
+  max-width: 100%;
 }
 
 /* ************************ END BASE STYLES ************************ */
@@ -74,7 +73,7 @@ header {
 }
 
 .navbar {
-  min-height: 70px;
+  min-height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -129,7 +128,7 @@ header {
   border: 2px solid var(--clr-black);
   border-radius: 2px;
   letter-spacing: 0.2rem;
-  padding: .7em 1.6em;
+  padding: 0.5em 1.6em;
   font-weight: 600;
   font-size: 1.6rem;
   color: var(--clr-white);
@@ -140,6 +139,7 @@ header {
 .contact-btn {
   box-shadow: 0 0 var(--clr-black);
   transition: box-shadow 300ms ease;
+  text-transform: uppercase;
 }
 
 .contact-btn:hover {
@@ -163,7 +163,7 @@ header {
 
 .ideas-btn-one:hover,
 .ideas-btn-two:hover {
-  box-shadow: 10px 10px var(--clr-black);
+  box-shadow: 5px 5px var(--clr-black);
 }
 
 @keyframes ideas-btn {
@@ -184,7 +184,7 @@ header {
 }
 
 .article-btn:hover {
-  box-shadow: -10px 10px var(--clr-black);
+  box-shadow: -5px 5px var(--clr-black);
   top: -1.6rem;
   left: 0;
   position: relative;
@@ -231,8 +231,7 @@ header {
 }
 
 .main-left-header {
-  /* font-size: 6.25rem; */
-  font-size: 6.5em;
+  font-size: 6.5rem;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1.2;
@@ -240,7 +239,6 @@ header {
 
 .main-left-subheader {
   font-size: 2rem;
-  /* line-height: 3rem; */
   font-weight: 400;
   margin: 1.5em 0;
   width: 80%;
@@ -251,7 +249,7 @@ header {
 }
 
 .daydreamer-pic {
-  max-width: 100%;
+  width: 110%;
   max-width: 50rem;
 }
 
@@ -543,11 +541,20 @@ header {
   font-weight: 600;
 }
 
-.footer-nav-links li {
+.footer-nav-links li,
+.fab {
   font-size: 2rem;
   padding: 1rem;
   cursor: pointer;
 }
+
+
+.footer-nav-links li:hover,
+.fab:hover {
+  color: var(--clr-black);
+  opacity: .8;
+}
+
 
 .copyright {
   font-size: 1.6rem;

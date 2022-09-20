@@ -26,8 +26,6 @@ ideaButton.addEventListener("click", function () {
   idea.textContent = habit[Math.floor(Math.random() * habit.length)];
 });
 
-
-
 // Hamburger toggle
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -43,3 +41,46 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
+
+const stackTitle = document.querySelector(".stack-title");
+const stackRight = document.querySelector(".stack-right");
+const handshakeImg = document.querySelector(".handshake-img");
+const storiesTitle = document.querySelector(".stories-header-title");
+const storiesDesc = document.querySelector(".stories-header-desc");
+const quote = document.querySelector(".quotes-section-quote");
+const ideasFade = document.querySelectorAll(".ideas-fade");
+const ideasBox = document.querySelector(".ideas-box");
+const storiesBox = document.querySelectorAll(".stories-box");
+
+const options = {
+  threshold: 0.5,
+  //   rootMargin: "-200px",
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    console.log(entry);
+    entry.target.classList.toggle("fade-in");
+    observer.unobserve(entry.target);
+  });
+}, options);
+
+observer.observe(stackTitle);
+observer.observe(stackRight);
+observer.observe(handshakeImg);
+observer.observe(storiesTitle);
+observer.observe(storiesDesc);
+observer.observe(quote);
+
+ideasFade.forEach((idea) => {
+  observer.observe(idea);
+});
+
+observer.observe(ideasBox);
+
+storiesBox.forEach((idea) => {
+  observer.observe(idea);
+});

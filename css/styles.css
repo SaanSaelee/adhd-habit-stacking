@@ -100,7 +100,7 @@ header {
 
 .logo {
   font-family: var(--font-VIC), sans-serif, Arial, Helvetica;
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: 700;
 }
 
@@ -289,8 +289,6 @@ header {
   font-weight: 500;
   line-height: 5.5rem;
   text-align: center;
-  opacity: 0;
-  transform: translateY(50px);
 }
 
 .stack-left {
@@ -324,11 +322,7 @@ header {
   max-width: 40%;
 }
 
-.stack-left,
-.stack-right {
-  opacity: 0;
-  transform: translateY(50px);
-}
+
 
 .stack-right-header {
   font-size: 4rem;
@@ -385,11 +379,7 @@ header {
   font-size: 2rem;
 }
 
-.handshake-img,
-.stories-header-title,
-.stories-header-desc {
-  opacity: 0;
-}
+
 
 .stories-wrap {
   display: flex;
@@ -414,8 +404,6 @@ header {
   border-radius: 2px;
   box-shadow: 0.5rem 0.5rem var(--clr-black);
   width: 100%;
-  opacity: 0;
-  transform: translateY(50px);
 }
 
 .stories {
@@ -453,8 +441,6 @@ header {
   font-weight: 500;
   line-height: 5.5rem;
   text-align: center;
-  opacity: 0;
-  transform: translateY(50px);
 }
 
 .italic {
@@ -508,12 +494,7 @@ header {
   background: var(--clr-primary-pink);
 }
 
-.ideas-left-title,
-.ideas-left-desc,
-.ideas-box {
-  opacity: 0;
-  transform: translateY(50px);
-}
+
 
 .ideas-box {
   display: flex;
@@ -593,7 +574,23 @@ header {
 
 /* ************************ END FOOTER ************************ */
 
-/********************* Animation ********************/
+/********************* Animation Fade-in********************/
+
+.stack-title,
+.stack-left,
+.stack-right,
+.handshake-img,
+.stories-header-title,
+.stories-header-desc,
+.stories-box,
+.quotes-section-quote,
+.ideas-left-title,
+.ideas-left-desc,
+.ideas-box {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
 .fade-in {
   transform: translate(0);
   transition: 1.25s ease;

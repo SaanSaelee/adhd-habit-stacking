@@ -54,8 +54,9 @@ const ideasBox = document.querySelector(".ideas-box");
 const storiesBox = document.querySelectorAll(".stories-box");
 
 const options = {
+  root: null,
   threshold: 0.4,
-  //   rootMargin: "-200px",
+  rootMargin: "0px",
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -63,7 +64,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     if (!entry.isIntersecting) {
       return;
     }
-    console.log(entry);
+    // console.log(entry);
     entry.target.classList.toggle("fade-in");
     observer.unobserve(entry.target);
   });

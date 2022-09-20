@@ -43,6 +43,7 @@ document.querySelectorAll(".nav-link").forEach((n) =>
 );
 
 const stackTitle = document.querySelector(".stack-title");
+const stackLeft = document.querySelector(".stack-left");
 const stackRight = document.querySelector(".stack-right");
 const handshakeImg = document.querySelector(".handshake-img");
 const storiesTitle = document.querySelector(".stories-header-title");
@@ -53,7 +54,7 @@ const ideasBox = document.querySelector(".ideas-box");
 const storiesBox = document.querySelectorAll(".stories-box");
 
 const options = {
-  threshold: 0.5,
+  threshold: 0.4,
   //   rootMargin: "-200px",
 };
 
@@ -69,17 +70,17 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, options);
 
 observer.observe(stackTitle);
+observer.observe(stackLeft);
 observer.observe(stackRight);
 observer.observe(handshakeImg);
 observer.observe(storiesTitle);
 observer.observe(storiesDesc);
 observer.observe(quote);
+observer.observe(ideasBox);
 
 ideasFade.forEach((idea) => {
   observer.observe(idea);
 });
-
-observer.observe(ideasBox);
 
 storiesBox.forEach((idea) => {
   observer.observe(idea);

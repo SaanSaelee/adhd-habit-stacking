@@ -211,8 +211,6 @@ header {
   height: 2rem;
 }
 
-
-
 /* ************************ START MAIN ************************ */
 
 #main-section {
@@ -292,6 +290,7 @@ header {
   line-height: 5.5rem;
   text-align: center;
   opacity: 0;
+  transform: translateY(50px);
 }
 
 .stack-left {
@@ -323,6 +322,10 @@ header {
   padding: 4.8rem;
   min-width: 30%;
   max-width: 40%;
+}
+
+.stack-left,
+.stack-right {
   opacity: 0;
   transform: translateY(50px);
 }
@@ -425,8 +428,6 @@ header {
   padding: 5rem;
 }
 
-
-
 /* ************************ END STORIES ************************ */
 
 /* ************************ START QUOTES SECTION ************************ */
@@ -453,6 +454,7 @@ header {
   line-height: 5.5rem;
   text-align: center;
   opacity: 0;
+  transform: translateY(50px);
 }
 
 .italic {
@@ -597,7 +599,6 @@ header {
   transition: 1.25s ease;
   opacity: 1;
 }
-
 
 /* ***************** Large devices only **************************************************************************** */
 

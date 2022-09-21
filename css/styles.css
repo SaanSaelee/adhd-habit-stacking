@@ -47,6 +47,7 @@ a {
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
@@ -118,7 +119,6 @@ img {
   position: relative;
 }
 
-
 /* ************************ BORDER STYLES ************************ */
 
 .top-border {
@@ -154,8 +154,6 @@ header {
   );
   box-shadow: 0 0 10px var(--clr-shadow-gray);
   color: var(--clr-white);
-  font-size: 2rem;
-  font-weight: 500;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -163,6 +161,8 @@ header {
 }
 
 .navbar {
+  font-size: 2rem;
+  font-weight: 500;
   min-height: 60px;
   display: flex;
   justify-content: space-between;
@@ -217,6 +217,7 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding-bottom: 5rem;
 }
 
 .main__container {
@@ -246,8 +247,11 @@ header {
 }
 
 .daydreamer-img {
+  position: relative;
+  right: 10%;
   width: 110%;
   max-width: 50rem;
+  z-index: -10;
 }
 
 /* ************************ STACK ************************ */
@@ -258,7 +262,7 @@ header {
   justify-content: center;
   align-items: center;
   background: var(--clr-lavender-light);
-  min-height: 90vh;
+  min-height: 100vh;
   padding: 5rem 0;
 }
 
@@ -297,13 +301,17 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .stack__box--right {
+  background: var(--clr-primary-pink);
+  color: var(--clr-white);
   border: 2px solid var(--clr-black);
   box-shadow: 5px -5px var(--clr-black);
   border-radius: 2px;
+  min-width: 30%;
+  max-width: 40%;
 }
 
 .stack__box--body {
@@ -312,11 +320,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  background: var(--clr-primary-pink);
-  color: var(--clr-white);
   padding: 4.8rem;
-  min-width: 30%;
-  /* max-width: 40%; */
 }
 
 .stack__box--title {
@@ -326,11 +330,9 @@ header {
 }
 
 .stack__box--desc {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 3rem;
-  text-align: left;
   color: var(--clr-white);
+  font-size: 1.8rem;
+  text-align: left;
 }
 
 /* ************************ STORIES ************************ */
@@ -342,6 +344,7 @@ header {
   align-items: center;
   background: #fff;
   min-height: 100vh;
+  padding: 5rem 0;
 }
 
 .stories__container {
@@ -360,7 +363,7 @@ header {
 }
 
 .handshake__img {
-  max-width: 15rem;
+  max-width: 12rem;
   width: 100%;
 }
 
@@ -416,10 +419,10 @@ header {
   background: var(--clr-lavender-light);
   width: 100%;
   min-height: 30vh;
+  padding: 5rem 0;
 }
 
 .quote__container {
-  padding: 5rem 0;
   max-width: 1280px;
   width: 80%;
 }
@@ -440,6 +443,7 @@ header {
   align-items: center;
   width: 100%;
   min-height: 80vh;
+  padding: 5rem 0;
 }
 
 .ideas__container {
@@ -451,7 +455,7 @@ header {
   box-shadow: 10px 10px var(--clr-black);
   border-radius: 2px;
   padding: 5rem;
-  margin: 5rem 0;
+  margin: 0 auto;
   max-width: 1080px;
   width: 80%;
 }
@@ -459,7 +463,6 @@ header {
 .ideas__body--title {
   color: #fff;
   font-size: 4.8rem;
-  line-height: 6rem;
 }
 
 .ideas__body--title::selection {
@@ -469,7 +472,6 @@ header {
 .ideas__body--desc {
   color: #fff;
   font-size: 2rem;
-  line-height: 3rem;
   margin: 2rem 0;
 }
 
@@ -486,7 +488,7 @@ header {
   border: 2px solid var(--clr-black);
   box-shadow: 5px -5px var(--clr-black);
   border-radius: 2px;
-  margin: 5rem;
+  margin-left: 5rem;
 }
 
 .ideas {
@@ -522,22 +524,22 @@ header {
   margin: 0 auto;
 }
 
-.footer-header {
+.footer__header {
   font-weight: 600;
 }
 
-.footer-nav-links li,
+.footer__nav--links,
 .fab {
   font-size: 2rem;
   padding: 1rem;
   cursor: pointer;
 }
 
-.footer-nav-links li:first-child {
+.footer__nav--links:first-child {
   cursor: default;
 }
 
-.footer-nav-links li:not(:first-child):hover,
+.footer__nav--links:not(:first-child):hover,
 .fab:hover {
   color: var(--clr-black);
   opacity: 0.8;
@@ -581,126 +583,106 @@ header {
 /* ***************** Large devices only **************************************************************************** */
 
 @media (min-width: 1200px) and (max-width: 1440px) {
-  /* START STACK */
-
-  .stack-title {
-    font-size: 3.2rem;
-    font-weight: 500;
-    line-height: 5.5rem;
-    text-align: center;
-  }
-
-  .stack-right {
+  .stack__box--body {
     padding: 4rem;
   }
 
-  .stack-right-header {
+  .stack__box--title {
     font-size: 3.6rem;
+    line-height: 1.2;
   }
 
-  .stack-right-subheader {
-    font-size: 1.8rem;
-    line-height: 2.6rem;
+  .stack__box--desc {
+    font-size: 1.6rem;
   }
 
-  /* START STORIES */
-
-  .stories-header p {
-    line-height: 3rem;
-  }
-
-  .stories {
+  .story {
     font-size: 1.4rem;
     padding: 4rem;
   }
 
-  /* START FOOTER  */
+  .ideas__body--title {
+    font-size: 4rem;
+  }
+
+  .ideas__body--desc {
+    font-size: 1.6rem;
+  }
 
   #footer {
     padding: 5rem 0;
   }
 
+  .footer__nav--links,
+  .fab {
+    font-size: 1.6rem;
+  }
+
   .copyright {
     padding: 3rem 0;
   }
-
-  /* END FOOTER */
 }
 
 /* ***************** Medium devices only ***************** */
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* START MAIN */
-
-  .main-left-header {
-    font-size: 4rem;
-    line-height: 4.8rem;
-  }
-
-  .main-left-subheader {
+  
+  .navbar {
     font-size: 1.6rem;
-    line-height: 2.8rem;
-    margin: 2.2rem 0;
   }
 
-  /* START STACK */
+  .contact-btn {
+    font-size: 1.4rem;
+  }
+  
+  .main__header--title {
+    font-size: 5.5rem;
+  }
 
-  .stack-wrap {
+  .main__header--desc {
+    font-size: 1.6rem;
+  }
+
+  #stack {
+    min-height: 80vh;
+  }
+
+  .stack__header {
+    font-size: 2.8rem;
+  }
+
+  .stack__box--wrap {
     padding: 3.5rem;
     gap: 3.5rem;
   }
 
-  .stack-title {
-    font-size: 3.2rem;
-    line-height: 4.6rem;
+  .stack__box--body {
+    padding: 3rem;
   }
 
-  .stack-right {
+  .stack__box--title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+
+  .stack__box--desc {
+    font-size: 1.4rem;
+  }
+
+  .story {
     padding: 3.5rem;
+    font-size: 1.2rem;
   }
 
-  .stack-right-header {
-    font-size: 3.2rem;
-  }
-
-  .stack-right-subheader {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-  }
-
-  /* START STORIES */
-
-  .stories-header p {
-    line-height: 3.2rem;
-  }
-
-  .stories {
-    padding: 3.5rem;
-  }
-
-  /* START QUOTES */
-
-  .quotes-section h2 {
-    font-size: 3.2rem;
-    line-height: 4.6rem;
-  }
-
-  /* START IDEAS */
-
-  #ideas-section {
+  #ideas {
     min-height: 70vh;
   }
 
-  .ideas-section-wrap {
-    padding: 3rem;
-  }
-  .ideas-left h2 {
-    font-size: 4rem;
-    line-height: 4.6rem;
+  .ideas__body--title {
+    font-size: 3.6rem;
   }
 
-  .ideas-left p {
+  .ideas__body--desc {
     font-size: 1.4rem;
-    line-height: 2.6rem;
   }
 
   .ideas {
@@ -710,22 +692,18 @@ header {
     padding: 2rem;
   }
 
-  /* START FOOTER  */
-
   #footer {
     padding: 3rem 0;
   }
 
-  .footer-nav-links li {
-    font-size: 1.8rem;
+  .footer__nav--links,
+  .fab {
+    font-size: 1.6rem;
   }
 
   .copyright {
-    font-size: 1.4rem;
-    padding: 2.5rem 0;
+    padding: 3rem 0;
   }
-
-  /* END FOOTER */
 }
 
 /* ***************** Small devices only ***************** */

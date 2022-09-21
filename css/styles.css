@@ -1,18 +1,18 @@
-/* ************************ ROOT STYLES ************************ */
+/* ************************************************* Root Styles ************************************************* */
 :root {
   --clr-white: #fff;
   --clr-black: #212529;
   --clr-gray: #495057;
   --clr-shadow-gray: #888888;
   --clr-primary-purple: #5800ff;
+  --clr-lavender-light: #faf7ff;
   --clr-primary-pink: #f637ec;
   --clr-secondary-pink: #ef4eec;
-  --clr-lavender-light: #faf7ff;
   --font-VIC: "Edu VIC WA NT Beginner", sans-serif, helvetica, Arial;
   --font-Mont: "Montserrat", sans-serif, helvetica, Arial;
 }
 
-/* ************************ BASE STYLES ************************ */
+/* ************************************************* Base Styles ************************************************* */
 
 *,
 ::before,
@@ -51,7 +51,7 @@ img {
   max-width: 100%;
 }
 
-/* ************************ BUTTON STYLES ************************ */
+/* ************************************************* Button Styles ************************************************* */
 
 .btn {
   border: 2px solid var(--clr-black);
@@ -65,37 +65,35 @@ img {
   cursor: pointer;
 }
 
-.contact-btn {
-  box-shadow: 0 0 var(--clr-black);
-  transition: box-shadow 300ms ease;
-  text-transform: uppercase;
-}
-
-.contact-btn:hover {
-  box-shadow: 5px 5px var(--clr-black);
-}
-
-.pink-btn {
+.btn--pink {
   background: var(--clr-primary-pink);
 }
 
-.purple-btn {
+.btn--purple {
   background: var(--clr-primary-purple);
 }
 
-.ideas-btn-one,
-.ideas-btn-two {
-  box-shadow: 0px 0px var(--clr-black);
+.btn--pink,
+.btn--purple,
+.btn--main,
+.btn--ideas {
+  box-shadow: 0 0 var(--clr-black);
   transition: box-shadow 300ms ease;
-  animation: ideas-btn 1000ms infinite alternate;
 }
 
-.ideas-btn-one:hover,
-.ideas-btn-two:hover {
+.btn--pink:hover {
   box-shadow: 5px 5px var(--clr-black);
 }
 
-@keyframes ideas-btn {
+.btn--purple:hover {
+  box-shadow: -5px 5px var(--clr-black);
+}
+
+.btn--main {
+  animation: ideas 1000ms infinite alternate;
+}
+
+@keyframes ideas {
   0% {
     transform: translateY(0);
   }
@@ -104,37 +102,31 @@ img {
   }
 }
 
-.article-btn {
-  position: relative;
-  top: -1.6rem;
-  left: 0;
-  box-shadow: 0 0 var(--clr-black);
-  transition: all 300ms ease;
+.btn--contact {
+  text-transform: uppercase;
 }
 
-.article-btn:hover {
-  box-shadow: -5px 5px var(--clr-black);
-  top: -1.6rem;
-  left: 0;
+.btn--article {
   position: relative;
+  top: -1.6rem;
 }
 
 /* ************************ BORDER STYLES ************************ */
 
-.top-border {
+.border__top {
   background: linear-gradient(
     to right,
-    var(--clr-primary-purple) 10%,
+    var(--clr-primary-purple) 60%,
     var(--clr-primary-pink)
   );
   width: 100%;
 }
 
-.top-border--short {
+.border__top--short {
   height: 1rem;
 }
 
-.top-border--tall {
+.border__top--tall {
   height: 2rem;
 }
 
@@ -144,9 +136,16 @@ img {
   font-style: italic;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: content;
+  align-items: center;
+}
+
 /* ************************ NAVBAR ************************ */
 
 header {
+  position: fixed;
   background: linear-gradient(
     to left,
     var(--clr-primary-purple) 20%,
@@ -154,37 +153,36 @@ header {
   );
   box-shadow: 0 0 10px var(--clr-shadow-gray);
   color: var(--clr-white);
-  position: fixed;
+  opacity: 0.95;
   width: 100%;
   z-index: 1;
-  opacity: 0.95;
 }
 
 .navbar {
-  font-size: 2rem;
-  font-weight: 500;
-  min-height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1em;
+  font-size: 2rem;
+  font-weight: 500;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 1em;
+  min-height: 60px;
 }
 
-.nav-menu {
+.nav__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1em;
 }
 
-.nav-link:hover {
+.nav__link:hover {
   color: var(--clr-black);
   opacity: 0.65;
 }
 
-.nav-link:last-child:hover {
+.nav__link:last-child:hover {
   opacity: 1;
 }
 
@@ -210,7 +208,7 @@ header {
   border-radius: 2px;
 }
 
-/* ************************ MAIN ************************ */
+/* ************************ MAIN Styles ************************ */
 
 #main {
   display: flex;
@@ -228,21 +226,22 @@ header {
   width: 80%;
 }
 
-.main__header--title {
+.main__body--title {
   font-size: 6.5rem;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1.2;
+  margin-top: 2em;
 }
 
-.main__header--desc {
+.main__body--desc {
   font-size: 2rem;
   font-weight: 400;
   margin: 1.5em 0;
   width: 80%;
 }
 
-.main__img {
+.main__img--wrap {
   width: 100%;
 }
 
@@ -271,10 +270,9 @@ header {
   width: 80%;
 }
 
-.stack__header {
+.stack__header--title {
   font-size: 3.2rem;
   font-weight: 500;
-  text-align: center;
   padding-bottom: 5rem;
 }
 
@@ -353,13 +351,14 @@ header {
   width: 80%;
 }
 
-.stories__header {
+.stories__header--wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 2rem;
-  width: 100%;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .handshake__img {
@@ -373,6 +372,7 @@ header {
 
 .stories__header--desc {
   font-size: 2rem;
+  width: 90%;
 }
 
 .stories__box--wrap {
@@ -431,7 +431,6 @@ header {
   margin: 0 auto;
   font-size: 3.2rem;
   font-weight: 500;
-  line-height: 5.5rem;
   text-align: center;
 }
 
@@ -460,22 +459,21 @@ header {
   width: 80%;
 }
 
-.ideas__body--title {
+.ideas__header--title {
   color: #fff;
   font-size: 4.8rem;
 }
 
-.ideas__body--title::selection {
-  background: var(--clr-primary-pink);
-}
-
-.ideas__body--desc {
+.ideas__header--desc {
   color: #fff;
   font-size: 2rem;
   margin: 2rem 0;
 }
+.ideas__header--title::selection {
+  background: var(--clr-primary-pink);
+}
 
-.ideas__body--desc::selection {
+.ideas__header--desc::selection {
   background: var(--clr-primary-pink);
 }
 
@@ -559,17 +557,18 @@ header {
 
 /********************* FADE IN ANIMATION ********************/
 
-.stack__header,
+.stack__header--title,
 .stack__box--left,
 .stack__box--right,
 .handshake__img,
 .stories__header--title,
 .stories__header--desc,
 .stories__box,
-.quotes__header,
-.ideas__body--title,
-.ideas__body--desc,
-.ideas__box {
+.quote__header,
+.ideas__header--title,
+.ideas__header--desc,
+.ideas__box,
+.btn--ideas {
   opacity: 0;
   transform: translateY(50px);
 }
@@ -582,7 +581,7 @@ header {
 
 /* ***************** Large devices only **************************************************************************** */
 
-@media (min-width: 1200px) and (max-width: 1440px) {
+@media only screen and (max-width: 1440px) {
   .stack__box--body {
     padding: 4rem;
   }
@@ -601,11 +600,11 @@ header {
     padding: 4rem;
   }
 
-  .ideas__body--title {
+  .ideas__header--title {
     font-size: 4rem;
   }
 
-  .ideas__body--desc {
+  .ideas__header--desc {
     font-size: 1.6rem;
   }
 
@@ -624,26 +623,21 @@ header {
 }
 
 /* ***************** Medium devices only ***************** */
-@media (min-width: 992px) and (max-width: 1199px) {
-  
+@media only screen and (max-width: 1024px) {
+  .btn {
+    font-size: 1.2rem;
+  }
+
   .navbar {
     font-size: 1.6rem;
   }
 
-  .contact-btn {
-    font-size: 1.4rem;
-  }
-  
-  .main__header--title {
+  .main__body--title {
     font-size: 5.5rem;
   }
 
-  .main__header--desc {
+  .main__body--desc {
     font-size: 1.6rem;
-  }
-
-  #stack {
-    min-height: 80vh;
   }
 
   .stack__header {
@@ -673,15 +667,11 @@ header {
     font-size: 1.2rem;
   }
 
-  #ideas {
-    min-height: 70vh;
-  }
-
-  .ideas__body--title {
+  .ideas__header--title {
     font-size: 3.6rem;
   }
 
-  .ideas__body--desc {
+  .ideas__header--desc {
     font-size: 1.4rem;
   }
 
@@ -695,193 +685,18 @@ header {
   #footer {
     padding: 3rem 0;
   }
-
-  .footer__nav--links,
-  .fab {
-    font-size: 1.6rem;
-  }
-
-  .copyright {
-    padding: 3rem 0;
-  }
-}
-
-/* ***************** Small devices only ***************** */
-@media (min-width: 768px) and (max-width: 991px) {
-  /* START NAVBAR */
-
-  .navbar {
-    font-size: 1.8rem;
-  }
-
-  .nav-menu {
-    gap: 0.7em;
-  }
-
-  /* START BUTTON */
-
-  .btn {
-    padding: 0.5em 1.2em;
-    font-size: 1.4rem;
-  }
-
-  .contact-btn:hover {
-    box-shadow: 5px 5px var(--clr-black);
-  }
-
-  .ideas-btn-one:hover,
-  .ideas-btn-two:hover {
-    box-shadow: 5px 5px var(--clr-black);
-  }
-
-  /* END BUTTON */
-
-  /* START MAIN */
-
-  .main-wrap {
-    flex-direction: column;
-    margin-top: 10rem;
-  }
-
-  .main-left-header {
-    font-size: 3.8rem;
-    line-height: 4.6rem;
-  }
-
-  .main-left-subheader {
-    font-size: 1.6rem;
-    margin: 2rem 0;
-  }
-
-  .daydreamer-pic {
-    display: flex;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  /* END MAIN */
-
-  /* START STACK */
-
-  .stack-wrap {
-    padding: 2rem;
-    gap: 2rem;
-  }
-
-  .stack-title {
-    font-size: 2.8rem;
-    line-height: 4.2rem;
-  }
-
-  .stack-right {
-    padding: 2rem;
-  }
-
-  .stack-right-header {
-    font-size: 2.6rem;
-  }
-
-  .stack-right-subheader {
-    font-size: 1.4rem;
-    line-height: 2rem;
-  }
-
-  /* END STACK */
-
-  /* START STORIES */
-
-  #stories-section {
-    min-height: 80vh;
-  }
-
-  .stories-header h2 {
-    font-size: 3.4rem;
-  }
-
-  .stories-header p {
-    font-size: 1.4rem;
-    line-height: 2.6rem;
-  }
-
-  .stories {
-    font-size: 1.2rem;
-    padding: 2rem;
-  }
-
-  /* END STORIES */
-
-  /* START QUOTES */
-
-  .quotes-section h2 {
-    font-size: 2.8rem;
-    line-height: 4.2rem;
-  }
-
-  /* END QUOTES */
-
-  /* START IDEAS */
-
-  #ideas-section {
-    min-height: 60vh;
-  }
-
-  .ideas-section-wrap {
-    padding: 2.8rem;
-  }
-  .ideas-left h2 {
-    font-size: 3.2rem;
-    line-height: 4.2rem;
-  }
-
-  .ideas-left p {
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-  }
-
-  .ideas-box {
-    margin: 2.6rem;
-  }
-
-  .ideas {
-    font-size: 1.8rem;
-    width: 26rem;
-    height: 16rem;
-    padding: 1.4rem;
-  }
-
-  /* END IDEAS */
-
-  /* START FOOTER  */
-
-  #footer {
-    padding: 2rem 0;
-  }
-
-  .footer-nav-links li {
-    font-size: 1.6rem;
-  }
-
-  .copyright {
-    font-size: 1.2rem;
-    padding: 2rem 0;
-  }
 }
 
 /* ***************** Extra Small devices only ***************** */
 @media only screen and (max-width: 767px) {
-  /* START NAV */
-
-  /* Stacks the hamburger icon */
   .hamburger {
     display: block;
   }
 
-  /* Removes middle hamburger */
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
 
-  /* Creates an X icon */
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(405deg);
   }
@@ -890,190 +705,181 @@ header {
     transform: translateY(-8px) rotate(-405deg);
   }
 
-  .nav-menu {
+  header {
+    opacity: 1;
+  }
+
+  .btn--contact {
+    font-size: 1.6rem;
+  }
+
+  .nav__list {
     position: fixed;
     left: -100%;
-    top: 70px;
+    top: 60px;
     gap: 0;
     flex-direction: column;
     background-color: var(--clr-primary-purple);
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 500;
+    padding: 1em 0;
   }
 
-  .nav-item {
-    margin: 1rem 0;
+  .nav__item {
+    margin: 0.75em 0;
   }
 
-  .nav-menu.active {
+  .nav__list.active {
     left: 0;
   }
 
   .logo {
     font-size: 4rem;
-    padding: 1rem 2rem;
+    padding: 0.25rem 1.5rem;
   }
 
-  .contact-btn:hover {
-    box-shadow: 5px 5px var(--clr-black);
-  }
-
-  /* END NAV */
-
-  /* START MAIN */
-
-  .main-wrap {
+  .main__container {
     flex-direction: column;
     max-width: 100%;
     margin-top: 10rem;
   }
 
-  .main-left-header {
-    font-size: 3rem;
-    line-height: 3.6rem;
+  .main__body--title {
+    font-size: 3.2rem;
   }
 
-  .main-left-subheader {
+  .main__body--desc {
     font-size: 1.4rem;
-    line-height: 2.4rem;
     width: 100%;
-    margin: 2.2rem 0;
   }
 
-  .main-right {
+  .main__img--wrap {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 5rem 0;
   }
 
-  /* END MAIN */
+  .daydreamer-img {
+    width: 100%;
+    right: 0;
+  }
 
   /* START STACK */
 
-  #stack-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: var(--clr-lavender-light);
-    min-height: 100vh;
+  .stack__header--wrap {
+    width: 100%;
   }
 
-  .stack-wrap {
+  .stack__header--title {
+    font-size: 2rem;
+  }
+
+  .handshake__img {
+    margin: 0 auto;
+  }
+
+  .stack__box--wrap {
     flex-direction: column;
     padding: 2rem;
     gap: 2rem;
   }
 
-  .stack-title {
-    font-size: 2.4rem;
-    line-height: 3rem;
+  .stack__box--left {
+    order: 2;
   }
 
-  .stack-right {
-    padding: 2rem;
+  .stack__box--right {
+    padding: 0.5em;
     min-width: 100%;
     max-width: 100%;
+    order: 1;
   }
 
-  .stack-right-header {
+  .stack__box--title {
     font-size: 2.4rem;
   }
 
-  .stack-right-subheader {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+  .stack__box--desc {
+    font-size: 1.2rem;
   }
-
-  /* END STACK */
 
   /* START STORIES */
 
-  .stories-header {
-    padding: 0 1rem;
+  #stories {
+    padding: 0;
   }
 
-  .stories-header h2 {
-    font-size: 3.4rem;
+  .stories__header--wrap {
+    width: 100%;
   }
 
-  .stories-header p {
+  .handshake__img {
+    max-width: 7rem;
+  }
+
+  .stories__header--title {
+    font-size: 2.4rem;
+  }
+
+  .stories__header--desc {
     font-size: 1.4rem;
-    line-height: 2.4rem;
-    padding-bottom: 3rem;
+    text-align: left;
+    width: 100%;
   }
 
-  .stories-wrap {
-    margin-top: 0;
-    height: 100%;
-  }
-
-  .stories-top,
-  .stories-bottom {
+  .stories__box--top,
+  .stories__box--bottom {
     flex-direction: column;
   }
 
-  /* END STORIES */
-
   /* START QUOTES */
 
-  .quotes-section {
-    margin: 5rem 0;
+  .quote__header {
+    font-size: 2rem;
+    text-align: left;
   }
-
-  .quotes-section h2 {
-    font-size: 2.4rem;
-    line-height: 3rem;
-    padding: 0 3rem;
-  }
-
-  /* END QUOTES */
 
   /* START IDEAS */
 
-  .ideas-section-wrap {
+  .ideas__container {
     flex-direction: column;
     padding: 3rem 2rem;
   }
 
-  .ideas-left h2 {
-    font-size: 3.2rem;
-    line-height: 4.2rem;
+  .ideas__header--title {
+    font-size: 2.4rem;
   }
 
-  .ideas-left p {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+  .ideas__header--desc {
+    font-size: 1.2rem;
   }
 
-  .ideas-box {
-    width: 100%;
+  .ideas__box {
+    margin: 5em 0 0 0;
+    min-width: 100%;
     height: 100%;
   }
 
   .ideas {
     font-size: 1.6rem;
-    width: 100%;
     height: 20rem;
+    width: 100%;
     padding: 2rem;
   }
 
-  /* END IDEAS */
-
   /* START FOOTER */
 
-  .footer-nav-links li {
-    font-size: 1.4rem;
+  .footer__nav--links {
+    font-size: 1.2rem;
     padding: 0.5rem;
   }
 
   .copyright {
     font-size: 1rem;
-    padding: 3rem 0;
+    padding: 2em 0;
   }
-
-  /* END FOOTER */
 }

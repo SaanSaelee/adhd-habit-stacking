@@ -35,19 +35,19 @@
       <nav id="navbar" class="navbar">
         <a href="#top" class="logo">adhd</a>
 
-        <ul class="nav-menu">
-          <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#stack">Habit</a>
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#top">Home</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="#stack">Habit</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#stories">Stories</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#stories">Stories</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#ideas">Ideas</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#ideas">Ideas</a>
           </li>
-          <li class="nav-item">
-            <a class="btn contact-btn pink-btn" href="#footer">Contact</a>
+          <li class="nav__item">
+            <a class="btn btn--contact btn--pink" href="#footer">Contact</a>
           </li>
         </ul>
 
@@ -63,20 +63,20 @@
       <!-- START MAIN SECTION -->
       <section id="main">
         <div class="main__container">
-          <div class="main__header--wrap">
-            <h1 class="main__header--title">
+          <div class="main__body--wrap">
+            <h1 class="main__body--title">
               Our ADHD brains are terrible at completing basic everyday tasks.
             </h1>
-            <p class="main__header--desc">
+            <p class="main__body--desc">
               Let's face it. We'd rather daydream than do the things that we
               need to do to get through the day. You are not alone in your daily
               struggles. We got you!
             </p>
-            <a href="#ideas" class="btn ideas-btn-one purple-btn">
-              Generate Ideas
+            <a href="#ideas" class="btn btn--main btn--purple">
+              See how!
             </a>
           </div>
-          <div class="main__img">
+          <div class="main__img--wrap">
             <img
               class="daydreamer-img"
               src="images/22_daydream_1_800x600.gif"
@@ -90,7 +90,7 @@
       <section id="stack">
         <div class="stack__container">
           <div class="stack__header--wrap">
-            <h2 class="stack__header">
+            <h2 class="stack__header--title">
               Use this interactive resource guide to help you generate random
               ideas to get motivated and inspired to form fun and effortless
               habits.
@@ -106,13 +106,12 @@
               <a
                 href="https://www.theremarkablewoman.com.au/insights/habit-stacking-how-to-build-positive-habits-by-attaching-them-to-old-ones"
                 target="_blank"
-                class="btn article-btn purple-btn"
+                class="btn btn--article btn--purple"
               >
                 Read Article
               </a>
             </div>
             <div class="stack__box--right">
-              <div class="top-border top-border--tall mh-100"></div>
               <div class="stack__box--body">
                 <h2 class="stack__box--title">Habit Stacking</h2>
                 <p class="stack__box--desc">
@@ -129,7 +128,7 @@
       <!-- START STORIES SECTION -->
       <section id="stories">
         <div class="stories__container">
-          <div class="stories__header">
+          <div class="stories__header--wrap">
             <img
               class="handshake__img"
               src="images/handshake.png"
@@ -146,18 +145,18 @@
           <div class="stories__box--wrap">
             <div class="stories__box--top">
               <div class="stories__box">
-                <div class="top-border top-border--short"></div>
+                <div class="border__top border__top--short"></div>
                 <div class="story">"Brush your teeth while showering."</div>
               </div>
               <div class="stories__box">
-                <div class="top-border top-border--short"></div>
+                <div class="border__top border__top--short"></div>
                 <div class="story">
                   "Make it a ritual. Brush mindfully, slowly, tooth by tooth,
                   section by section, focus on the bristles."
                 </div>
               </div>
               <div class="stories__box">
-                <div class="top-border top-border--short"></div>
+                <div class="border__top border__top--short"></div>
                 <div class="story">
                   "Get different flavored toothpaste to make it more fun."
                 </div>
@@ -165,20 +164,20 @@
             </div>
             <div class="stories__box--bottom">
               <div class="stories__box">
-                <div class="top-border top-border--short"></div>
+                <div class="border__top border__top--short"></div>
                 <div class="story">
                   "Get active and spontaneous: dance around, hop up and down or
                   stand on one leg.""
                 </div>
               </div>
               <div class="stories__box">
-                <div class="top-border top-border--short"></div>
+                <div class="border__top border__top--short"></div>
                 <div class="story">
                   "YouTube a video on your iPhone or iPad."
                 </div>
               </div>
               <div class="stories__box">
-                <div class="top-border top-border--short"></div>
+                <div class="border__top border__top--short"></div>
                 <div class="story">
                   "Turn on your favorite song while brushing."
                 </div>
@@ -202,22 +201,22 @@
       <!-- START IDEAS SECTION -->
       <section id="ideas">
         <div class="ideas__container">
-          <div class="ideas__body">
-            <h2 class="ideas__body--title ideas-fade">
+          <div class="ideas__header">
+            <h2 class="ideas__header--title">
               Real people. <br />
               Real responses. <br />
               Real habits.
             </h2>
-            <p class="ideas__body--desc ideas-fade">
+            <p class="ideas__header--desc">
               It's all about testing, iterating, and refining. Find the
               combination that works best for you. You know your brain best.
             </p>
-            <a id="ideas-btn" class="btn ideas-btn-two pink-btn">
+            <a id="btn__ideas" class="btn btn--ideas btn--pink">
               Generate Ideas
             </a>
           </div>
           <div class="ideas__box">
-            <div class="top-border top-border--tall"></div>
+            <div class="border__top border__top--tall"></div>
             <div class="ideas">You got this!</div>
           </div>
         </div>
@@ -230,7 +229,9 @@
         <div class="footer__container">
           <div class="footer__nav">
             <ul class="footer__nav--list">
-              <li class="footer__nav--links"><span class="footer__header">Resources</span></li>
+              <li class="footer__nav--links">
+                <span class="footer__header">Resources</span>
+              </li>
               <li class="footer__nav--links">Blog</li>
               <li class="footer__nav--links">Case Studies</li>
               <li class="footer__nav--links">News</li>
@@ -240,7 +241,9 @@
 
           <div class="footer__nav">
             <ul class="footer__nav--list">
-              <li class="footer__nav--links"><span class="footer__header">Company</span></li>
+              <li class="footer__nav--links">
+                <span class="footer__header">Company</span>
+              </li>
               <li class="footer__nav--links">About Us</li>
               <li class="footer__nav--links">Science of Learning</li>
               <li class="footer__nav--links">Careers</li>

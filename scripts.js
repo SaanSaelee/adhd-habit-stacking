@@ -19,7 +19,7 @@ let habit = [
   "Brush with the PokeMon Smile app. Everyone needs a little Pikachu in their lives. 😂",
 ];
 
-let ideaButton = document.getElementById("ideas-btn");
+let ideaButton = document.getElementById("btn__ideas");
 
 ideaButton.addEventListener("click", function () {
   let idea = document.querySelector(".ideas");
@@ -28,14 +28,14 @@ ideaButton.addEventListener("click", function () {
 
 // Hamburger toggle
 const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const navMenu = document.querySelector(".nav__list");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
 
-document.querySelectorAll(".nav-link").forEach((n) =>
+document.querySelectorAll(".nav__link").forEach((n) =>
   n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
@@ -43,7 +43,7 @@ document.querySelectorAll(".nav-link").forEach((n) =>
 );
 
 const fadeIn = document.querySelectorAll(
-  ".stack__header, .stack__box--left, .stack__box--right, .handshake__img, .stories__header--title, .stories__header--desc, .stories__box, .quotes__header, .ideas__body--title, .ideas__body--desc, .ideas__box"
+  ".stack__header--title, .stack__box--left, .stack__box--right, .handshake__img, .stories__header--title, .stories__header--desc, .stories__box, .quote__header, .ideas__header--title, .ideas__header--desc, .ideas__box, .btn--ideas"
 );
 
 const options = {
@@ -57,7 +57,6 @@ const observer = new IntersectionObserver((entries, observer) => {
     if (!entry.isIntersecting) {
       return;
     }
-    // console.log(entry);
     entry.target.classList.toggle("fade-in");
     observer.unobserve(entry.target);
   });

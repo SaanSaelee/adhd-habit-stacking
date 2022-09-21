@@ -258,8 +258,8 @@ header {
   justify-content: center;
   align-items: center;
   background: var(--clr-lavender-light);
-  min-height: 100vh;
-  padding: 5rem;
+  min-height: 90vh;
+  padding: 5rem 0;
 }
 
 .stack__container {
@@ -555,19 +555,19 @@ header {
 
 /* ************************ END BODY ************************ */
 
-/********************* Animation Fade-in********************/
+/********************* FADE IN ANIMATION ********************/
 
-.stack-title,
-.stack-left,
-.stack-right,
-.handshake-img,
-.stories-header-title,
-.stories-header-desc,
-.stories-box,
-.quotes-section-quote,
-.ideas-left-title,
-.ideas-left-desc,
-.ideas-box {
+.stack__header,
+.stack__box--left,
+.stack__box--right,
+.handshake__img,
+.stories__header--title,
+.stories__header--desc,
+.stories__box,
+.quotes__header,
+.ideas__body--title,
+.ideas__body--desc,
+.ideas__box {
   opacity: 0;
   transform: translateY(50px);
 }

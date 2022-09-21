@@ -42,16 +42,9 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
-const stackTitle = document.querySelector(".stack-title");
-const stackLeft = document.querySelector(".stack-left");
-const stackRight = document.querySelector(".stack-right");
-const handshakeImg = document.querySelector(".handshake-img");
-const storiesTitle = document.querySelector(".stories-header-title");
-const storiesDesc = document.querySelector(".stories-header-desc");
-const quote = document.querySelector(".quotes-section-quote");
-const ideasFade = document.querySelectorAll(".ideas-fade");
-const ideasBox = document.querySelector(".ideas-box");
-const storiesBox = document.querySelectorAll(".stories-box");
+const fadeIn = document.querySelectorAll(
+  ".stack__header, .stack__box--left, .stack__box--right, .handshake__img, .stories__header--title, .stories__header--desc, .stories__box, .quotes__header, .ideas__body--title, .ideas__body--desc, .ideas__box"
+);
 
 const options = {
   root: null,
@@ -70,19 +63,6 @@ const observer = new IntersectionObserver((entries, observer) => {
   });
 }, options);
 
-observer.observe(stackTitle);
-observer.observe(stackLeft);
-observer.observe(stackRight);
-observer.observe(handshakeImg);
-observer.observe(storiesTitle);
-observer.observe(storiesDesc);
-observer.observe(quote);
-observer.observe(ideasBox);
-
-ideasFade.forEach((idea) => {
-  observer.observe(idea);
-});
-
-storiesBox.forEach((idea) => {
+fadeIn.forEach((idea) => {
   observer.observe(idea);
 });

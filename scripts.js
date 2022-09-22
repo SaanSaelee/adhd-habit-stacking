@@ -43,7 +43,7 @@ document.querySelectorAll(".nav__link").forEach((n) =>
 );
 
 const fadeIn = document.querySelectorAll(
-  ".stack__header--title, .stack__box--left, .stack__box--right, .handshake__img, .stories__header--title, .stories__header--desc, .stories__box, .quote__header, .ideas__header--title, .ideas__header--desc, .ideas__box, .btn--ideas"
+  ".stack__header--title, .stack__box--left, .stack__box--right, .handshake__img, .stories__header--title, .stories__header--desc, .stories__box, .quote__header, .ideas__header--title, .ideas__header--desc, .ideas__box"
 );
 
 const options = {
